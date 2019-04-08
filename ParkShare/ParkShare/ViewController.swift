@@ -10,6 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    
+    @IBOutlet weak var logoImage: UIImageView!
+    
+    @IBOutlet weak var infoLabel: UILabel!
+    
+    @IBAction func seelistingButton(_ sender: Any) {
+    }
+    
+    @IBAction func postlistingButton(_ sender: Any) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
