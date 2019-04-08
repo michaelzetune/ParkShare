@@ -11,7 +11,6 @@
 ParkShare allows you to find others' spare parking spots to rent out for short-term or long-term periods. Search for a spot on a map and filter based on price, garage vs. street parking, and more. Owners can use the app to post their empty spots and start making money!
 
 ### App Evaluation
-[Evaluation of your app across the following attributes]
 - **Category:**
 - **Mobile:**
 - **Story:**
@@ -25,47 +24,39 @@ ParkShare allows you to find others' spare parking spots to rent out for short-t
 
 **Required Must-have Stories**
 
-* [fill in your required user stories here]
-* ...
+As a parking spot renter I want to:
+* Browse the area for available parking spots on a map, filtering by dates and distance away
+* See listings with pictures, descriptions, and pricing
+* Contact the spot owner with questions/to book
+
+As an owner of a spare parking spot I want to:
+* List my parking spot with pictures and a location
+* Pick specific dates the spot is open for
+
 
 **Optional Nice-to-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* Allow for purchasing of the spot within the app
 
 ### 2. Screen Archetypes
 
-* [list first screen here]
-   * [list associated required story here]
-   * ...
-* [list second screen here]
-   * [list associated required story here]
-   * ...
+* Home Screen
+* Listings Search
+* Listings Map
+* Create Listing Screen
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-* [fill out your first tab]
-* [fill out your second tab]
-* [fill out your third tab]
+* Search Tab (for spot renters)
+* Post Tab (for spot owners)
 
-**Flow Navigation** (Screen to Screen)
 
-* [list first screen here]
-   * [list screen navigation here]
-   * ...
-* [list second screen here]
-   * [list screen navigation here]
-   * ...
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img src="https://raw.githubusercontent.com/codepath-group-2/ParkShare/master/ParkShareMockup.png" width=600>
 
-### [BONUS] Digital Wireframes & Mockups
-
-### [BONUS] Interactive Prototype
 
 ## Schema
 [This section will be completed in Unit 9]
