@@ -24,15 +24,22 @@ ParkShare allows you to find others' spare parking spots to rent out for short-t
 
 **Required Must-have Stories**
 
+General:
+* Greet user with app description on first load
+* Create an account or login. The same User account serves for listing spots and renting them
+
 As a parking spot renter I want to:
-* Browse the area for available parking spots on a map, filtering by dates and distance away
-* See listings with pictures, descriptions, and pricing
+* Browse the area for available parking spots on a map, filtering by dates available, distance, and price
+* See listings with pictures, descriptions, and pricing. Filter by dates available, distance, and price
+* See more details about the listing, including available dates
 * Book a spot for a particular set of dates
-* Contact the spot owner with questions
+* Contact the spot owner with questions, using mobile number or email
 
 As an owner of a spare parking spot I want to:
 * List my parking spot with pictures and a location
 * Pick specific dates the spot is open for
+* Edit listings retroactively
+* See parking spots being rented out, and change details related to those listings
 
 
 **Optional Stories**
@@ -42,16 +49,22 @@ As an owner of a spare parking spot I want to:
 ### 2. Screen Archetypes
 
 * Introduction Screen
-* Listings Search Screen
-    * See listings with pictures, descriptions, and pricing
-* Listings Map Screen
-    * Browse the area for available parking spots on a map, filtering by dates and distance away
-* Create Listing Screen
+    * Greet user with app description on first load
+* Login/Create Account Screen
+    * Create an account or login. The same User account serves for listing spots and renting them
+* Stream Screen
+    * See listings with pictures, descriptions, and pricing. Filter by dates available, distance, and price
+* Map View Screen
+    * Browse the area for available parking spots on a map, filtering by dates available, distance, and price
+* Creation Screen
     * List my parking spot with pictures and a location
     * Pick specific dates the spot is open for
-* Listing Details Screen
-    * Book a spot for a particular set of dates
-    * Contact the spot owner with questions
+    * Edit listings retroactively
+* Detail Screen
+    * See more details about the listing, including available dates
+    * Contact the spot owner with questions, using mobile number or email
+* Profile Screen
+    * See parking spots being rented out, and change details related to those listings
 
 ### 3. Navigation
 
@@ -63,8 +76,10 @@ As an owner of a spare parking spot I want to:
 **Flow Navigation** (Screen to Screen)
 
 * Introduction Screen to:
-    * Listings Search
-    * Create Listings Screen
+    * Login Screen
+    * Create Account Screen
+* Login/Create Account Screen to:
+    * Listings Search Screen
 * Listings Search Screen to:
     * Listing Details Screen
     * Listings Map Screen
@@ -86,6 +101,18 @@ As an owner of a spare parking spot I want to:
 ### Models
 [Add table of models]
 ### Networking
-- [Add list of network requests by screen ]
+- List of network requests by screen
+    - User Registration Screen
+        - (CREATE/POST) Create new user: Name, Email, Password, Profile Picture
+    - Home Feed Screen
+        - (READ/GET) get all listings
+        - (READ/GET) author for the listings
+        - (CREATE/POST) new listing
+    - Map Screen
+        - (READ/GET) location of listing
+        - (READ/GET) title of listing
+    - New Listing Screen
+        - (CREATE/POST) Title, picture, available date, description
 - [Create basic snippets for each Parse network request]
+- CREATE
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
