@@ -11,6 +11,8 @@ import UIKit
 class SearchTableViewController: UITableViewController {
 
     override func viewDidLoad() {
+        
+        
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
@@ -24,23 +26,29 @@ class SearchTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 50
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 50
     }
 
-    /*
+   
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SearchCell") as! SearchCell
 
-        // Configure the cell...
+        cell.titleLabel!.text = "Hello"
+        cell.numberspotsLabel!.text = "Hi"
+        cell.infospotLabel!.text = "What's up"
+        cell.profilepicImage.image = UIImage(named: "profilepic")
+        cell.usernameLabel!.text = "Hello"
+        cell.parkingImage!.image = UIImage(named: "parkingspace")
+        cell.howfarLabel!.text = "Hello"
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

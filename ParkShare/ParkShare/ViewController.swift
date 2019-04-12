@@ -17,10 +17,16 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var infoLabel: UILabel!
     
-    @IBAction func seelistingButton(_ sender: Any) {
+    @IBAction func searchListingButton(_ sender: Any) {
+        tabBarController?.selectedIndex = 0
+        //self.performSegue(withIdentifier: "gotoListings", sender: self)
     }
     
-    @IBAction func postlistingButton(_ sender: Any) {
+    
+    
+    @IBAction func postListingButton(_ sender: Any) {
+        tabBarController?.selectedIndex = 1
+        //self.performSegue(withIdentifier: "gotoPostings", sender: self)
     }
     
     override func viewDidLoad() {
