@@ -40,6 +40,7 @@ class SearchTableViewController: UITableViewController {
         cell.usernameLabel!.text = "Hello"
         cell.parkingImage!.image = UIImage(named: "parkingspace")
 
+
         return cell
     }
     

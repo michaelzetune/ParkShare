@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to ParkShare" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qoE-5i-Ht4">
-                                <rect key="frame" x="16" y="72" width="343" height="60"/>
+                                <rect key="frame" x="16" y="50" width="343" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="qoE-5i-Ht4" secondAttribute="height" multiplier="343:60" id="8eH-Cr-ZGe"/>
                                 </constraints>
@@ -27,11 +27,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="parksharelogo 2" translatesAutoresizingMaskIntoConstraints="NO" id="Pjd-u9-R8P">
-                                <rect key="frame" x="67.5" y="153" width="240" height="225"/>
-                            </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJD-NS-um7">
-                                <rect key="frame" x="40" y="418" width="295" height="125.5"/>
+                                <rect key="frame" x="40" y="433.5" width="295" height="125.5"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" staticText="YES" adjustable="YES" allowsDirectInteraction="YES"/>
                                 </accessibility>
@@ -56,23 +53,29 @@
                                     <segue destination="Gtg-OY-cNf" kind="show" id="Jin-eK-3vM"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="parksharelogo" translatesAutoresizingMaskIntoConstraints="NO" id="hAQ-rC-NDt">
+                                <rect key="frame" x="54" y="133" width="267" height="267"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hAQ-rC-NDt" secondAttribute="height" multiplier="1:1" id="SoB-n3-ogO"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="qoE-5i-Ht4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="3fs-hs-4sy"/>
+                            <constraint firstItem="hAQ-rC-NDt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="8hz-uF-hzp"/>
                             <constraint firstItem="ayU-9s-j90" firstAttribute="centerY" secondItem="abY-1v-X0U" secondAttribute="centerY" id="BVF-nj-Tbn"/>
                             <constraint firstItem="AJD-NS-um7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="C0b-KG-ML6"/>
-                            <constraint firstItem="abY-1v-X0U" firstAttribute="top" relation="greaterThanOrEqual" secondItem="AJD-NS-um7" secondAttribute="bottom" constant="10" id="DCV-s2-2au"/>
+                            <constraint firstItem="abY-1v-X0U" firstAttribute="top" secondItem="AJD-NS-um7" secondAttribute="bottom" constant="20" id="DCV-s2-2au"/>
                             <constraint firstItem="abY-1v-X0U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="DDb-4l-fP0"/>
-                            <constraint firstItem="qoE-5i-Ht4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="52" id="EQr-VC-7Ic"/>
-                            <constraint firstItem="AJD-NS-um7" firstAttribute="top" secondItem="Pjd-u9-R8P" secondAttribute="bottom" constant="40" id="J5p-09-29Y"/>
-                            <constraint firstItem="Pjd-u9-R8P" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JWW-am-MKG"/>
+                            <constraint firstItem="qoE-5i-Ht4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="EQr-VC-7Ic"/>
+                            <constraint firstItem="hAQ-rC-NDt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="54" id="IBK-rL-OI4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AJD-NS-um7" secondAttribute="trailing" constant="40" id="Klz-u0-6Y4"/>
+                            <constraint firstItem="hAQ-rC-NDt" firstAttribute="top" secondItem="qoE-5i-Ht4" secondAttribute="bottom" constant="23" id="PY1-iD-ckD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ayU-9s-j90" secondAttribute="trailing" constant="50" id="PfO-N0-6BI"/>
-                            <constraint firstItem="Pjd-u9-R8P" firstAttribute="top" secondItem="qoE-5i-Ht4" secondAttribute="bottom" constant="21" id="VV1-yU-wnk"/>
-                            <constraint firstItem="qoE-5i-Ht4" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="WA9-2A-kxq"/>
+                            <constraint firstItem="AJD-NS-um7" firstAttribute="top" relation="greaterThanOrEqual" secondItem="hAQ-rC-NDt" secondAttribute="bottom" constant="10" id="QKK-Kw-JlE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hAQ-rC-NDt" secondAttribute="trailing" constant="54" id="TrH-al-3Od"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="abY-1v-X0U" secondAttribute="bottom" constant="50" id="aQb-xN-WXz"/>
-                            <constraint firstItem="Pjd-u9-R8P" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="240:667" id="jbx-fX-tN3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qoE-5i-Ht4" secondAttribute="trailing" constant="16" id="tub-tX-UFM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -80,7 +83,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1001" y="133"/>
+            <point key="canvasLocation" x="-1002.4" y="132.68365817091455"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="tm3-g8-ucO">
@@ -283,7 +286,7 @@
                                             </constraints>
                                         </imageView>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="parkingspace" translatesAutoresizingMaskIntoConstraints="NO" id="QSR-zk-WBc">
-                                            <rect key="frame" x="172" y="45" width="187" height="135"/>
+                                            <rect key="frame" x="172" y="45" width="187" height="135.00000000000045"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="187" id="RdO-qP-IoH"/>
                                                 <constraint firstAttribute="height" constant="134.99999999999955" id="fkd-lH-JDC"/>
@@ -586,8 +589,8 @@ Street Level Parking</string>
     </scenes>
     <resources>
         <image name="parkingspace" width="2304" height="1712"/>
-        <image name="parksharelogo 2" width="225" height="225"/>
-        <image name="profilepic" width="200" height="200"/>
+        <image name="parksharelogo" width="1024" height="1024"/>
+        <image name="profilepic" width="3024" height="4032"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="hMi-sF-JRt"/>
