@@ -10,12 +10,10 @@ import UIKit
 
 class SearchCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var numberspotsLabel: UILabel!
     @IBOutlet weak var infospotLabel: UILabel!
     @IBOutlet weak var profilepicImage: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var parkingImage: UIImageView!
-    @IBOutlet weak var howfarLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

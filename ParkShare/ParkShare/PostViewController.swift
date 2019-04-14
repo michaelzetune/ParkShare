@@ -10,17 +10,13 @@ import UIKit
 
 class PostViewController: UIViewController {
 
-    @IBOutlet weak var nowlistingLabel: UILabel!
+    @IBOutlet weak var listingNameLabel: UILabel!
+    @IBOutlet weak var titleField: UITextField!
     
-    @IBAction func entertitleField(_ sender: Any) {
+    @IBAction func pictureButtonPressed(_ sender: Any) {
     }
     
-    @IBAction func pictureButton(_ sender: Any) {
-    }
-    
-    @IBOutlet weak var datesLabel: UILabel!
-    
-    @IBAction func postlistingButton(_ sender: Any) {
+    @IBAction func createListingButtonPressed(_ sender: Any) {
     }
     
     override func viewDidLoad() {
