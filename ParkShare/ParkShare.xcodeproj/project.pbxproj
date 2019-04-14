@@ -12,8 +12,10 @@
 		135CA7CD225B9E62007620C4 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135CA7CC225B9E62007620C4 /* SearchCell.swift */; };
 		135CA7CF225B9E86007620C4 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135CA7CE225B9E86007620C4 /* PostViewController.swift */; };
 		135CA7D1225B9EB9007620C4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135CA7D0225B9EB9007620C4 /* MapViewController.swift */; };
+		4CA00A292262AEFA0062AA26 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA00A282262AEFA0062AA26 /* LoginViewController.swift */; };
+		4CA00A2B2262B0410062AA26 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA00A2A2262B0410062AA26 /* CreateAccountViewController.swift */; };
 		4CE2104E225A4B4B00856191 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE2104D225A4B4B00856191 /* AppDelegate.swift */; };
-		4CE21050225A4B4B00856191 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE2104F225A4B4B00856191 /* ViewController.swift */; };
+		4CE21050225A4B4B00856191 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE2104F225A4B4B00856191 /* HomeViewController.swift */; };
 		4CE21053225A4B4B00856191 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CE21051225A4B4B00856191 /* Main.storyboard */; };
 		4CE21055225A4B4C00856191 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CE21054225A4B4C00856191 /* Assets.xcassets */; };
 		4CE21058225A4B4C00856191 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CE21056225A4B4C00856191 /* LaunchScreen.storyboard */; };
@@ -25,9 +27,11 @@
 		135CA7CC225B9E62007620C4 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		135CA7CE225B9E86007620C4 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		135CA7D0225B9EB9007620C4 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		4CA00A282262AEFA0062AA26 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4CA00A2A2262B0410062AA26 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		4CE2104A225A4B4B00856191 /* ParkShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CE2104D225A4B4B00856191 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4CE2104F225A4B4B00856191 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4CE2104F225A4B4B00856191 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4CE21052225A4B4B00856191 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4CE21054225A4B4C00856191 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CE21057225A4B4C00856191 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -65,16 +69,18 @@
 			isa = PBXGroup;
 			children = (
 				4CE2104D225A4B4B00856191 /* AppDelegate.swift */,
-				4CE2104F225A4B4B00856191 /* ViewController.swift */,
 				4CE21051225A4B4B00856191 /* Main.storyboard */,
 				4CE21054225A4B4C00856191 /* Assets.xcassets */,
 				4CE21056225A4B4C00856191 /* LaunchScreen.storyboard */,
+				4CE2104F225A4B4B00856191 /* HomeViewController.swift */,
 				4CE21059225A4B4C00856191 /* Info.plist */,
 				135CA7CA225B9E34007620C4 /* SearchTableViewController.swift */,
 				135CA7CC225B9E62007620C4 /* SearchCell.swift */,
 				135CA7CE225B9E86007620C4 /* PostViewController.swift */,
 				135CA7D0225B9EB9007620C4 /* MapViewController.swift */,
 				1335A09D225C05E000730B5B /* ViewPostingViewController.swift */,
+				4CA00A282262AEFA0062AA26 /* LoginViewController.swift */,
+				4CA00A2A2262B0410062AA26 /* CreateAccountViewController.swift */,
 			);
 			path = ParkShare;
 			sourceTree = "<group>";
@@ -150,11 +156,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CE21050225A4B4B00856191 /* ViewController.swift in Sources */,
+				4CE21050225A4B4B00856191 /* HomeViewController.swift in Sources */,
 				135CA7D1225B9EB9007620C4 /* MapViewController.swift in Sources */,
 				135CA7CD225B9E62007620C4 /* SearchCell.swift in Sources */,
 				135CA7CB225B9E34007620C4 /* SearchTableViewController.swift in Sources */,
+				4CA00A292262AEFA0062AA26 /* LoginViewController.swift in Sources */,
 				4CE2104E225A4B4B00856191 /* AppDelegate.swift in Sources */,
+				4CA00A2B2262B0410062AA26 /* CreateAccountViewController.swift in Sources */,
 				135CA7CF225B9E86007620C4 /* PostViewController.swift in Sources */,
 				1335A09E225C05E000730B5B /* ViewPostingViewController.swift in Sources */,
 			);

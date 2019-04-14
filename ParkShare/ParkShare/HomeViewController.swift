@@ -8,26 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
-    
-    
     @IBOutlet weak var logoImage: UIImageView!
-    
     @IBOutlet weak var infoLabel: UILabel!
     
-    @IBAction func searchListingButton(_ sender: Any) {
-        tabBarController?.selectedIndex = 0
-        //self.performSegue(withIdentifier: "gotoListings", sender: self)
-    }
-    
-    
-    
-    @IBAction func postListingButton(_ sender: Any) {
-        tabBarController?.selectedIndex = 1
-        //self.performSegue(withIdentifier: "gotoPostings", sender: self)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
