@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gZv-MG-h0X">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="3Xd-lI-Mbg">
+            <objects>
+                <viewController id="gZv-MG-h0X" customClass="LoginViewController" customModule="ParkShare" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wo5-3g-2PY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Mb-L6-zVb">
+                                <rect key="frame" x="50" y="258" width="314" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tov-QD-bfL">
+                                <rect key="frame" x="50" y="323" width="314" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EB4-dc-d98">
+                                <rect key="frame" x="179" y="153" width="56" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to ParkShare" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Qw-1D-Eab">
+                                <rect key="frame" x="15" y="84" width="382" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eeU-fK-HFO">
+                                <rect key="frame" x="188" y="390" width="38" height="30"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="gZv-MG-h0X" eventType="touchUpInside" id="Yhx-kP-Gxb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eeU-fK-HFO" firstAttribute="centerX" secondItem="Tov-QD-bfL" secondAttribute="centerX" id="2RV-UC-oG0"/>
+                            <constraint firstItem="ANy-5N-w47" firstAttribute="trailing" secondItem="7Qw-1D-Eab" secondAttribute="trailing" constant="17" id="5BU-O2-7gV"/>
+                            <constraint firstItem="Tov-QD-bfL" firstAttribute="top" secondItem="0Mb-L6-zVb" secondAttribute="bottom" constant="35" id="I8O-i2-Dlk"/>
+                            <constraint firstItem="0Mb-L6-zVb" firstAttribute="leading" secondItem="ANy-5N-w47" secondAttribute="leading" constant="50" id="PFM-fO-vDl"/>
+                            <constraint firstItem="EB4-dc-d98" firstAttribute="centerX" secondItem="ANy-5N-w47" secondAttribute="centerX" id="Wat-5s-07V"/>
+                            <constraint firstItem="EB4-dc-d98" firstAttribute="top" secondItem="7Qw-1D-Eab" secondAttribute="bottom" constant="27" id="cDI-Re-YK7"/>
+                            <constraint firstItem="0Mb-L6-zVb" firstAttribute="top" secondItem="EB4-dc-d98" secondAttribute="bottom" constant="77" id="g8D-ti-UGp"/>
+                            <constraint firstItem="ANy-5N-w47" firstAttribute="trailing" secondItem="Tov-QD-bfL" secondAttribute="trailing" constant="50" id="sQq-XM-HRR"/>
+                            <constraint firstItem="Tov-QD-bfL" firstAttribute="leading" secondItem="ANy-5N-w47" secondAttribute="leading" constant="50" id="wXf-aC-95w"/>
+                            <constraint firstItem="eeU-fK-HFO" firstAttribute="top" secondItem="Tov-QD-bfL" secondAttribute="bottom" constant="37" id="wen-4m-Lcq"/>
+                            <constraint firstItem="7Qw-1D-Eab" firstAttribute="leading" secondItem="ANy-5N-w47" secondAttribute="leading" constant="15" id="wfd-2y-Yy3"/>
+                            <constraint firstItem="7Qw-1D-Eab" firstAttribute="top" secondItem="ANy-5N-w47" secondAttribute="top" constant="40" id="zXV-cn-VOX"/>
+                            <constraint firstItem="ANy-5N-w47" firstAttribute="trailing" secondItem="0Mb-L6-zVb" secondAttribute="trailing" constant="50" id="zlA-5w-w6z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ANy-5N-w47"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailField" destination="0Mb-L6-zVb" id="uxF-ts-Zly"/>
+                        <outlet property="passwordField" destination="Tov-QD-bfL" id="3CO-6G-Rnk"/>
+                        <segue destination="bW0-22-x6s" kind="presentation" identifier="fromLoginToListingsSegue" id="aSg-Lr-JZq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jEP-V3-eFY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8.8000000000000007" y="-107.49625187406298"/>
+        </scene>
+        <!--TabBar-->
+        <scene sceneID="oDw-RV-9am">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TabBar" id="bW0-22-x6s" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3JT-Gb-XSG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="903" y="133"/>
+        </scene>
+    </scenes>
+</document>

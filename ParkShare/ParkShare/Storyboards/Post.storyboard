@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="l7r-h6-vJY">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Posting-->
+        <scene sceneID="dsq-RZ-b8X">
+            <objects>
+                <viewController id="Jub-gY-IQF" customClass="PostViewController" customModule="ParkShare" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HLB-II-7KJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="New Listing!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbO-hx-GWi">
+                                <rect key="frame" x="119" y="83" width="136" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter a Title" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ehH-w1-e2G">
+                                <rect key="frame" x="50" y="129" width="275" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VkR-RB-D3a">
+                                <rect key="frame" x="125" y="181" width="125" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Snap a Picture"/>
+                                <connections>
+                                    <action selector="pictureButtonPressed:" destination="Jub-gY-IQF" eventType="touchUpInside" id="kl9-6c-7Xq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick available dates..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jze-n4-rm2">
+                                <rect key="frame" x="50" y="244" width="187" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iV2-8g-GQH">
+                                <rect key="frame" x="128.5" y="555" width="118" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Create Listing"/>
+                                <connections>
+                                    <action selector="createListingButtonPressed:" destination="Jub-gY-IQF" eventType="touchUpInside" id="dSx-Qp-Ut3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fbO-hx-GWi" firstAttribute="top" secondItem="Wrk-b5-20U" secondAttribute="top" constant="19" id="3UI-S3-TMg"/>
+                            <constraint firstItem="Wrk-b5-20U" firstAttribute="bottom" secondItem="iV2-8g-GQH" secondAttribute="bottom" constant="28" id="EJB-lW-vNc"/>
+                            <constraint firstItem="ehH-w1-e2G" firstAttribute="top" secondItem="Wrk-b5-20U" secondAttribute="top" constant="65" id="Hjf-Of-yxx"/>
+                            <constraint firstItem="VkR-RB-D3a" firstAttribute="top" secondItem="ehH-w1-e2G" secondAttribute="bottom" constant="22" id="QC5-oZ-Avx"/>
+                            <constraint firstItem="fbO-hx-GWi" firstAttribute="centerX" secondItem="Wrk-b5-20U" secondAttribute="centerX" id="jGX-ZI-Itu"/>
+                            <constraint firstItem="ehH-w1-e2G" firstAttribute="leading" secondItem="Wrk-b5-20U" secondAttribute="leading" constant="50" id="nuB-ou-zIF"/>
+                            <constraint firstItem="VkR-RB-D3a" firstAttribute="centerX" secondItem="ehH-w1-e2G" secondAttribute="centerX" id="qh7-yV-2qb"/>
+                            <constraint firstItem="Wrk-b5-20U" firstAttribute="trailing" secondItem="ehH-w1-e2G" secondAttribute="trailing" constant="50" id="vPo-9C-FdV"/>
+                            <constraint firstItem="iV2-8g-GQH" firstAttribute="centerX" secondItem="Wrk-b5-20U" secondAttribute="centerX" id="ytA-Xf-1F1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Wrk-b5-20U"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Posting" id="Unu-J2-Wn1"/>
+                    <connections>
+                        <outlet property="listingNameLabel" destination="fbO-hx-GWi" id="LPO-2C-4ko"/>
+                        <outlet property="titleField" destination="ehH-w1-e2G" id="jBP-wI-QHU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lDg-BG-Mb9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2930" y="727"/>
+        </scene>
+        <!--Post-->
+        <scene sceneID="iU7-dP-weI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="l7r-h6-vJY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Post" id="nmA-tM-qEa"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2G0-GK-b9o">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Jub-gY-IQF" kind="relationship" relationship="rootViewController" id="NTe-ZP-SdA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uZ9-4P-Ytb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1782" y="607"/>
+        </scene>
+    </scenes>
+</document>
