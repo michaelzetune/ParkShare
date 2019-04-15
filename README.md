@@ -97,22 +97,96 @@ As an owner of a spare parking spot I want to:
 
 
 ## Schema
-[This section will be completed in Unit 9]
+
 ### Models
-[Add table of models]
+![](https://i.imgur.com/vrMog3d.jpg)
+
 ### Networking
 - List of network requests by screen
     - User Registration Screen
         - (CREATE/POST) Create new user: Name, Email, Password, Profile Picture
-    - Home Feed Screen
-        - (READ/GET) get all listings
-        - (READ/GET) author for the listings
-        - (CREATE/POST) new listing
+        ```swift
+        let user = PFObject(className:"user")
+        user["name"] = "John Doe"
+        user["email"] = "john@utexas.edu"
+        user["password"] = "******"
+        let imageData = UIImagePNGRepresentation(image)
+        let imageFile = PFFileObject(name:"image.png",data:imageData)
+        user["profilePicture"] = imageFile
+        user.saveInBackground {(success: Bool, error: Error?) in
+        if (success) {
+        // The object has been saved.
+        } else {
+        // There was a problem, check error.description
+        }}
+        ```
+    - Home Feed Screen 
+        - (READ/GET) get all posts
+        ```swift
+        let query = PFQuery(className:"post")
+        query.getObjectInBackground(withId: "") { (gameScore:
+        PFObject?, error: Error?) in
+            if let error = error {
+                //The query returned an error
+                print(error.localizedDescription)
+            } else {
+                //The object has been retrieved
+                print(gameScore)
+            }
+        }
+        ```
+        - (READ/GET) author for the posts
+        
     - Map Screen
-        - (READ/GET) location of listing
-        - (READ/GET) title of listing
-    - New Listing Screen
-        - (CREATE/POST) Title, picture, available date, description
-- [Create basic snippets for each Parse network request]
-- CREATE
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+        - (READ/GET) location of posts
+        ```swift
+        let query = PFQuery(className:"post")
+        query.whereKey("location", equalTo: )
+        query.order(byDescending: "createdAt")
+        query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
+            if let error = error { 
+                print(error.localizedDescription)
+            } else if let posts = posts {
+          print("Successfully retrieved \(posts.count) posts.")
+          // TODO: Do something with posts...
+           }
+       }
+       ```
+        - (READ/GET) title of posts
+    - New Post Screen
+        - (CREATE/POST) new posts
+        ```swift
+        let post = PFObject(className:"post")
+        post["author"] = PFUser.currentUser().name
+        post["title"] = "This is a title"
+
+        let parkingImage = UIImagePNGRepresentation(image)
+        let parkingImageFile = PFFileObject(name:"image.png",data:imageData)
+        post["parkingImage"] = parkingImageFile
+                
+        let date = Date()
+        let calendar = Calendar.current
+        let hour = calendar.component(.hour, from: date)
+        let minutes = calendar.component(.minute, from: date)
+
+        post["creationDate"] = 
+        //figure out how to save date and time in Parse
+        
+        post["description"] = "This is a description"
+        
+        post["location"] = [latitute, longitude]
+        post["monthlyPrice"] = 1.00
+        post["parkingType"] = ["Garage", "Street covered", "street uncovered"]
+        
+        post["availableDates"] = {JSONObject}
+        //figure out how to use Swift DateInterval Class
+        
+        post[phoneNumber] = 000-000-000
+        
+        post.saveInBackground {(success: Bool, error: Error?) in
+        if (success) {
+        // The object has been saved.
+        } else {
+        // There was a problem, check error.description
+        }}
+        ```
