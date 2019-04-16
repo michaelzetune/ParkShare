@@ -1,0 +1,6 @@
+framework module Pods_ParkShare {
+  umbrella header "Pods-ParkShare-umbrella.h"
+
+  export *
+  module * { export * }
+}
