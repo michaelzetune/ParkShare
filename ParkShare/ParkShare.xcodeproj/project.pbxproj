@@ -19,6 +19,7 @@
 		4CE21053225A4B4B00856191 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CE21051225A4B4B00856191 /* Main.storyboard */; };
 		4CE21055225A4B4C00856191 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CE21054225A4B4C00856191 /* Assets.xcassets */; };
 		4CE21058225A4B4C00856191 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CE21056225A4B4C00856191 /* LaunchScreen.storyboard */; };
+		4CFBAF08226E600B00292AF5 /* FeedFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFBAF07226E600B00292AF5 /* FeedFilterViewController.swift */; };
 		770FC45A226549610044B858 /* LogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 770FC459226549610044B858 /* LogIn.storyboard */; };
 		77C34AA322654186009250B9 /* CreateAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77C34AA222654186009250B9 /* CreateAccount.storyboard */; };
 		77C34AA822654399009250B9 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77C34AA622654399009250B9 /* Feed.storyboard */; };
@@ -46,6 +47,7 @@
 		4CE21054225A4B4C00856191 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CE21057225A4B4C00856191 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4CE21059225A4B4C00856191 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CFBAF07226E600B00292AF5 /* FeedFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedFilterViewController.swift; sourceTree = "<group>"; };
 		770FC459226549610044B858 /* LogIn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LogIn.storyboard; sourceTree = "<group>"; };
 		77C34AA222654186009250B9 /* CreateAccount.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateAccount.storyboard; sourceTree = "<group>"; };
 		77C34AA722654399009250B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ParkShare/Base.lproj/Feed.storyboard; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				4CA00A282262AEFA0062AA26 /* LoginViewController.swift */,
 				4CA00A2A2262B0410062AA26 /* CreateAccountViewController.swift */,
 				135CA7CA225B9E34007620C4 /* FeedTableViewController.swift */,
+				4CFBAF07226E600B00292AF5 /* FeedFilterViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				135CA7CB225B9E34007620C4 /* FeedTableViewController.swift in Sources */,
 				4CA00A292262AEFA0062AA26 /* LoginViewController.swift in Sources */,
 				4CE2104E225A4B4B00856191 /* AppDelegate.swift in Sources */,
+				4CFBAF08226E600B00292AF5 /* FeedFilterViewController.swift in Sources */,
 				4CA00A2B2262B0410062AA26 /* CreateAccountViewController.swift in Sources */,
 				135CA7CF225B9E86007620C4 /* PostViewController.swift in Sources */,
 				1335A09E225C05E000730B5B /* ViewPostingViewController.swift in Sources */,
