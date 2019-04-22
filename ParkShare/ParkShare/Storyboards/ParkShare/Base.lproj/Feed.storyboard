@@ -32,7 +32,7 @@
                                             </constraints>
                                         </imageView>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="parkingspace" translatesAutoresizingMaskIntoConstraints="NO" id="QSR-zk-WBc">
-                                            <rect key="frame" x="211" y="45" width="187" height="135"/>
+                                            <rect key="frame" x="211" y="45" width="187" height="135.00000000000045"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="187" id="RdO-qP-IoH"/>
                                                 <constraint firstAttribute="height" constant="134.99999999999955" id="fkd-lH-JDC"/>
