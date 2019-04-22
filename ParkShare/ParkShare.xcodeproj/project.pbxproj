@@ -26,6 +26,7 @@
 		77C34AAD226543CD009250B9 /* ViewPosting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77C34AAB226543CD009250B9 /* ViewPosting.storyboard */; };
 		77C34AAF22654486009250B9 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77C34AAE22654486009250B9 /* Map.storyboard */; };
 		77C34AB42265479D009250B9 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77C34AB22265479D009250B9 /* TabBar.storyboard */; };
+		AF7D3CE063CB704D3071E6F2 /* Pods_ParkShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D684B2FC74E62EB0B5E0FC8 /* Pods_ParkShare.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		135CA7CC225B9E62007620C4 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		135CA7CE225B9E86007620C4 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		135CA7D0225B9EB9007620C4 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		1E71F65266E97F10099E95B5 /* Pods-ParkShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkShare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParkShare/Pods-ParkShare.debug.xcconfig"; sourceTree = "<group>"; };
 		3355A55F68D82C7449C9C538 /* Pods-ParkShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkShare.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParkShare/Pods-ParkShare.release.xcconfig"; sourceTree = "<group>"; };
 		4CA00A282262AEFA0062AA26 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4CA00A2A2262B0410062AA26 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 		77C34AAC226543CD009250B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ParkShare/Base.lproj/ViewPosting.storyboard; sourceTree = "<group>"; };
 		77C34AAE22654486009250B9 /* Map.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		77C34AB32265479D009250B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ParkShare/Base.lproj/TabBar.storyboard; sourceTree = "<group>"; };
+		8D684B2FC74E62EB0B5E0FC8 /* Pods_ParkShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParkShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C225761EF96A3A0065E1668 /* Pods_ParkShare.framework in Frameworks */,
+				AF7D3CE063CB704D3071E6F2 /* Pods_ParkShare.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,8 +71,8 @@
 		28E8D6B9F1A6CC3B6ED5357C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1351F50F1300AF2679300C0E /* Pods-ParkShare.debug.xcconfig */,
 				3355A55F68D82C7449C9C538 /* Pods-ParkShare.release.xcconfig */,
+				1E71F65266E97F10099E95B5 /* Pods-ParkShare.debug.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -138,7 +141,7 @@
 		F83266AB605977816CCD08CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A6947F8C4F610B212D33BF0C /* Pods_ParkShare.framework */,
+				8D684B2FC74E62EB0B5E0FC8 /* Pods_ParkShare.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -448,7 +451,7 @@
 		};
 		4CE2105D225A4B4C00856191 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1351F50F1300AF2679300C0E /* Pods-ParkShare.debug.xcconfig */;
+			baseConfigurationReference = 1E71F65266E97F10099E95B5 /* Pods-ParkShare.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

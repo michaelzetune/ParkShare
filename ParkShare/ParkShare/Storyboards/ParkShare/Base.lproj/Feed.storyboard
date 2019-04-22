@@ -4,8 +4,8 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -33,7 +33,7 @@
                                             </constraints>
                                         </imageView>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="parkingspace" translatesAutoresizingMaskIntoConstraints="NO" id="QSR-zk-WBc">
-                                            <rect key="frame" x="211" y="45" width="187" height="135"/>
+                                            <rect key="frame" x="211" y="45" width="187" height="135.00000000000045"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="187" id="RdO-qP-IoH"/>
                                                 <constraint firstAttribute="height" constant="134.99999999999955" id="fkd-lH-JDC"/>
@@ -93,6 +93,11 @@ Street Level Parking
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="ParkShare" id="zTL-Iy-lYt">
+                        <barButtonItem key="leftBarButtonItem" title="Filter" id="RHc-8v-cdB">
+                            <connections>
+                                <segue destination="7Qc-Go-o0s" kind="show" id="fiy-u5-pTv"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Map" id="sGs-SO-fb5">
                             <connections>
                                 <segue destination="yit-G6-cpK" kind="show" id="dCA-np-KRL"/>
@@ -136,6 +141,21 @@ Street Level Parking
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xl0-Bw-bLM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4386" y="-115"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="GSU-Hc-1tU">
+            <objects>
+                <viewController id="7Qc-Go-o0s" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hhR-As-CYi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ZOQ-Zx-frN"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y31-x8-ZRd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4030" y="281"/>
         </scene>
     </scenes>
     <resources>
