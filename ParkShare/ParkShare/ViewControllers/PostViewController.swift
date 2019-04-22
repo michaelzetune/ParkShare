@@ -8,15 +8,27 @@
 
 import UIKit
 
-class PostViewController: UIViewController {
+class PostViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var listingNameLabel: UILabel!
     @IBOutlet weak var titleField: UITextField!
     
     @IBAction func pictureButtonPressed(_ sender: Any) {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = true
+        
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
+            picker.sourceType = .camera
+        } else{
+            picker.sourceType = .photoLibrary
+        }
+        present(picker, animated:true, completion: nil)
+        
     }
     
     @IBAction func createListingButtonPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
