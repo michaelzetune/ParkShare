@@ -12,7 +12,7 @@
         <!--ParkShare-->
         <scene sceneID="WNL-Z3-kjv">
             <objects>
-                <tableViewController id="mJ9-qV-Bhp" customClass="SearchTableViewController" customModule="ParkShare" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="mJ9-qV-Bhp" customClass="FeedTableViewController" customModule="ParkShare" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="260" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="73q-ox-UhM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,7 +33,7 @@
                                             </constraints>
                                         </imageView>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="parkingspace" translatesAutoresizingMaskIntoConstraints="NO" id="QSR-zk-WBc">
-                                            <rect key="frame" x="211" y="45" width="187" height="135.00000000000045"/>
+                                            <rect key="frame" x="211" y="45" width="187" height="135"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="187" id="RdO-qP-IoH"/>
                                                 <constraint firstAttribute="height" constant="134.99999999999955" id="fkd-lH-JDC"/>
@@ -156,14 +156,17 @@ Street Level Parking
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSo-rc-uRp">
-                                <rect key="frame" x="186" y="288" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max Cost: $100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSo-rc-uRp">
+                                <rect key="frame" x="147" y="288" width="120" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="sfW-b4-Qfu">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="sfW-b4-Qfu">
                                 <rect key="frame" x="38" y="331" width="338" height="31"/>
+                                <connections>
+                                    <action selector="costFilterSliderChanged:" destination="7Qc-Go-o0s" eventType="valueChanged" id="wef-Qc-Sy3"/>
+                                </connections>
                             </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -178,6 +181,10 @@ Street Level Parking
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZOQ-Zx-frN"/>
                     </view>
+                    <connections>
+                        <outlet property="costFilterLabel" destination="gSo-rc-uRp" id="Ux8-EL-Dp7"/>
+                        <outlet property="costFilterSlider" destination="sfW-b4-Qfu" id="sjE-Es-c0s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y31-x8-ZRd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

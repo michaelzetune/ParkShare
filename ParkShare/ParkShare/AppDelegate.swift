@@ -29,8 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if PFUser.current() != nil {
             let main = UIStoryboard(name: "Main", bundle: nil)
-            let searchTableViewController = main.instantiateViewController(withIdentifier: "SearchTableViewController")
-            window?.rootViewController = searchTableViewController
+            let feedTableViewController = main.instantiateViewController(withIdentifier: "FeedTableViewController")
+            window?.rootViewController = feedTableViewController
         }
         
         

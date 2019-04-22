@@ -1,5 +1,5 @@
 //
-//  SearchTableViewController.swift
+//  FeedTableViewController.swift
 //  ParkShare
 //
 //  Created by Jonathan Bautista on 4/8/19.
@@ -8,7 +8,9 @@
 
 import UIKit
 
-class SearchTableViewController: UITableViewController {
+class FeedTableViewController: UITableViewController {
+    
+    var currentMaxCostFilter: Int? // gets set by FeedFilterViewController
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +41,6 @@ class SearchTableViewController: UITableViewController {
         cell.profilepicImage.image = UIImage(named: "profilepic")
         cell.usernameLabel!.text = "Hello"
         cell.parkingImage!.image = UIImage(named: "parkingspace")
-
 
         return cell
     }
