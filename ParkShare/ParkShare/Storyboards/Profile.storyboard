@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Profile-->
+        <scene sceneID="Vyg-Bw-jM3">
+            <objects>
+                <tableViewController id="SDB-z9-ROo" customClass="SearchTableViewController" customModule="ParkShare" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="263" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qve-Hw-wuq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchCell" rowHeight="263" id="waN-5j-CWq" customClass="SearchCell" customModule="ParkShare" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="263"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="waN-5j-CWq" id="oXw-1l-hMQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="262.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilepic" translatesAutoresizingMaskIntoConstraints="NO" id="bqI-WS-YZ8">
+                                            <rect key="frame" x="16" y="199" width="50" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="beV-3Q-OwB"/>
+                                                <constraint firstAttribute="width" secondItem="bqI-WS-YZ8" secondAttribute="height" multiplier="1:1" id="fu7-Py-AQm"/>
+                                            </constraints>
+                                        </imageView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="parkingspace" translatesAutoresizingMaskIntoConstraints="NO" id="wFl-jc-m4u">
+                                            <rect key="frame" x="211" y="45" width="187" height="135.00000000000045"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="187" id="3Mh-5k-C1W"/>
+                                                <constraint firstAttribute="height" constant="134.99999999999955" id="qzY-la-kPu"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Michael Z" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cr-eD-9cd">
+                                            <rect key="frame" x="84.5" y="218" width="47" height="12"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prime Location at 22nd and San Antonio Street." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COZ-ma-6Xg">
+                                            <rect key="frame" x="16" y="19" width="324.5" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tu-5n-xXK">
+                                            <rect key="frame" x="16" y="45" width="137" height="135"/>
+                                            <string key="text">1 spot open
+60$ a month
+Uncovered
+Street Level Parking
+200 ft. away</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJn-L0-Jef">
+                                            <rect key="frame" x="322" y="209" width="76" height="30"/>
+                                            <state key="normal" title="Edit Listing"/>
+                                            <connections>
+                                                <segue destination="HtV-vX-2Lf" kind="show" id="Gdw-sg-MWF"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="6tu-5n-xXK" firstAttribute="top" secondItem="wFl-jc-m4u" secondAttribute="top" id="5OB-Kb-JiM"/>
+                                        <constraint firstItem="COZ-ma-6Xg" firstAttribute="leading" secondItem="oXw-1l-hMQ" secondAttribute="leading" constant="16" id="6cK-TN-Szu"/>
+                                        <constraint firstItem="wFl-jc-m4u" firstAttribute="top" secondItem="COZ-ma-6Xg" secondAttribute="bottom" constant="8" id="6m9-Gk-TiD"/>
+                                        <constraint firstItem="COZ-ma-6Xg" firstAttribute="top" secondItem="oXw-1l-hMQ" secondAttribute="top" constant="19" id="EnZ-eQ-7Nw"/>
+                                        <constraint firstItem="bqI-WS-YZ8" firstAttribute="leading" secondItem="6tu-5n-xXK" secondAttribute="leading" id="G8r-Tl-3b4"/>
+                                        <constraint firstItem="7cr-eD-9cd" firstAttribute="leading" secondItem="bqI-WS-YZ8" secondAttribute="trailing" constant="18.5" id="GyC-GH-JM6"/>
+                                        <constraint firstAttribute="trailing" secondItem="wFl-jc-m4u" secondAttribute="trailing" constant="16" id="NUM-BP-7Cb"/>
+                                        <constraint firstAttribute="trailing" secondItem="HJn-L0-Jef" secondAttribute="trailing" constant="16" id="SyW-NY-mtG"/>
+                                        <constraint firstItem="6tu-5n-xXK" firstAttribute="bottom" secondItem="wFl-jc-m4u" secondAttribute="bottom" id="h93-D5-TUI"/>
+                                        <constraint firstItem="bqI-WS-YZ8" firstAttribute="top" secondItem="6tu-5n-xXK" secondAttribute="bottom" constant="19" id="qf1-bD-7E2"/>
+                                        <constraint firstItem="7cr-eD-9cd" firstAttribute="centerY" secondItem="bqI-WS-YZ8" secondAttribute="centerY" id="y26-p4-3cv"/>
+                                        <constraint firstItem="6tu-5n-xXK" firstAttribute="leading" secondItem="COZ-ma-6Xg" secondAttribute="leading" id="z2A-mn-s9E"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="infospotLabel" destination="6tu-5n-xXK" id="fst-mq-KTg"/>
+                                    <outlet property="parkingImage" destination="wFl-jc-m4u" id="6Nw-hB-4e2"/>
+                                    <outlet property="profilepicImage" destination="bqI-WS-YZ8" id="QAn-Od-kOd"/>
+                                    <outlet property="titleLabel" destination="COZ-ma-6Xg" id="rQf-Dy-NuH"/>
+                                    <outlet property="usernameLabel" destination="7cr-eD-9cd" id="GHx-n6-rU7"/>
+                                    <segue destination="jyi-zf-Ffx" kind="show" id="Mij-cO-uAx"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="SDB-z9-ROo" id="ooe-5g-w5G"/>
+                            <outlet property="delegate" destination="SDB-z9-ROo" id="U9f-UF-cbl"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Profile" id="OyN-2H-Cxe">
+                        <barButtonItem key="leftBarButtonItem" title="Edit" id="tBf-fy-VLm"/>
+                        <barButtonItem key="rightBarButtonItem" title="New Listing" id="VCc-kl-QeX">
+                            <connections>
+                                <segue destination="a2g-dE-wmB" kind="show" id="aG5-4z-1xp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="549-Mn-ZDN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2704.347826086957" y="-115.84821428571428"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="3vZ-Oh-ZEn">
+            <objects>
+                <navigationController id="sxj-GB-cUL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Search" id="Kbm-Jn-jmn"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VxK-pT-p5J">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="SDB-z9-ROo" kind="relationship" relationship="rootViewController" id="u4x-mE-9PX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kh3-6b-HaO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1783" y="-114"/>
+        </scene>
+        <!--Post-->
+        <scene sceneID="j6Z-JA-USZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Post" id="HtV-vX-2Lf" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KPY-Ks-Euj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3330" y="-293"/>
+        </scene>
+        <!--ViewPosting-->
+        <scene sceneID="xXr-uf-jvO">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ViewPosting" id="jyi-zf-Ffx" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aEo-FL-w7l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3404" y="-197"/>
+        </scene>
+        <!--Post-->
+        <scene sceneID="6h6-2E-d5F">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Post" id="a2g-dE-wmB" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Ro-sd-UKS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3268" y="-89"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="parkingspace" width="2304" height="1712"/>
+        <image name="profilepic" width="3024" height="4032"/>
+    </resources>
+</document>

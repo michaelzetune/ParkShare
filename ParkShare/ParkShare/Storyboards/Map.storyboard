@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qfb-WS-PHt">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,12 +14,26 @@
             <objects>
                 <viewController storyboardIdentifier="UIViewController-Qfb-WS-PHt" id="Qfb-WS-PHt" customClass="MapViewController" customModule="ParkShare" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="isk-eE-X4U">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ctv-sl-cOp">
+                                <rect key="frame" x="0.0" y="10" width="375" height="667"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ctv-sl-cOp" firstAttribute="height" secondItem="isk-eE-X4U" secondAttribute="height" id="3LR-q4-FnK"/>
+                            <constraint firstItem="ctv-sl-cOp" firstAttribute="centerY" secondItem="4h7-vx-Q1c" secondAttribute="centerY" id="5C6-TA-wtO"/>
+                            <constraint firstItem="ctv-sl-cOp" firstAttribute="centerX" secondItem="4h7-vx-Q1c" secondAttribute="centerX" id="fbZ-pa-23N"/>
+                            <constraint firstItem="ctv-sl-cOp" firstAttribute="width" secondItem="isk-eE-X4U" secondAttribute="width" id="kab-Nm-FDz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="4h7-vx-Q1c"/>
                     </view>
                     <navigationItem key="navigationItem" title="Map" id="3kc-dm-3ZJ"/>
+                    <connections>
+                        <outlet property="Map" destination="ctv-sl-cOp" id="4OM-L9-BAK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MdW-8y-FJx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
