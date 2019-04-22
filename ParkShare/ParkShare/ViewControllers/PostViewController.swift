@@ -28,7 +28,7 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     
     @IBAction func createListingButtonPressed(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        performSegue(withIdentifier: "postToFeed", sender: self)
     }
     
     override func viewDidLoad() {
@@ -36,7 +36,8 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
 
         // Do any additional setup after loading the view.
     }
-    
+
+
 
     /*
     // MARK: - Navigation
