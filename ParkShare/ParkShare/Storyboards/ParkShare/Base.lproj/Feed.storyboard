@@ -95,7 +95,7 @@ Street Level Parking
                     <navigationItem key="navigationItem" title="ParkShare" id="zTL-Iy-lYt">
                         <barButtonItem key="leftBarButtonItem" title="Filter" id="RHc-8v-cdB">
                             <connections>
-                                <segue destination="7Qc-Go-o0s" kind="show" id="fiy-u5-pTv"/>
+                                <segue destination="7Qc-Go-o0s" kind="show" identifier="FeedTableToFeedFilterSegue" id="fiy-u5-pTv"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Map" id="sGs-SO-fb5">

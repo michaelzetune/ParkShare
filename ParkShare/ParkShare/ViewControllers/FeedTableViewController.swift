@@ -8,18 +8,23 @@
 
 import UIKit
 
-class FeedTableViewController: UITableViewController {
+class FeedTableViewController: UITableViewController, FilterDelegate {
     
-    var currentMaxCostFilter: Int? // gets set by FeedFilterViewController
+    var currentMaxCostFilter: Int = 100 // gets set again by FeedFilterViewController
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("current max: \(currentMaxCostFilter)")
     }
 
     // MARK: - Table view data source
@@ -43,6 +48,22 @@ class FeedTableViewController: UITableViewController {
         cell.parkingImage!.image = UIImage(named: "parkingspace")
 
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        print("segue from feed table to feed filter")
+        
+        if (segue.identifier == "FeedTableToFeedFilterSegue"){
+            let destFeedFilterViewController = segue.destination as! FeedFilterViewController
+            destFeedFilterViewController.delegate = self
+            destFeedFilterViewController.currentCostValue = currentMaxCostFilter
+        }
+    }
+    
+    func changeMaxCostValue(newValue: Int!) {
+        currentMaxCostFilter = newValue
     }
     
 
