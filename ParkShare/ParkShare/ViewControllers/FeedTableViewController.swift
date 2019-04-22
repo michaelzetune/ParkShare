@@ -34,7 +34,7 @@ class FeedTableViewController: UITableViewController {
 
    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SearchCell") as! SearchCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ListingCell") as! ListingCell
 
         cell.titleLabel!.text = "Hello"
         cell.infospotLabel!.text = "What's up"

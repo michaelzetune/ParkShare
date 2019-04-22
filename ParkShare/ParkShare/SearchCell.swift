@@ -1,5 +1,5 @@
 //
-//  SearchCell.swift
+//  ListingCell.swift
 //  ParkShare
 //
 //  Created by Jonathan Bautista on 4/8/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchCell: UITableViewCell {
+class ListingCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var infospotLabel: UILabel!
     @IBOutlet weak var profilepicImage: UIImageView!
