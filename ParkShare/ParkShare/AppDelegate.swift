@@ -27,11 +27,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             })
         )
         
-        if PFUser.current() != nil {
-            let main = UIStoryboard(name: "Main", bundle: nil)
-            let feedTableViewController = main.instantiateViewController(withIdentifier: "FeedTableViewController")
-            window?.rootViewController = feedTableViewController
-        }
+//        if PFUser.current() != nil {
+//            window?.rootViewController?.performSegue(withIdentifier: "fromHomeToFeedSegue", sender: window?.rootViewController)
+//        }
         
         
         

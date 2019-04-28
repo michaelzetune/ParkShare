@@ -79,6 +79,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="lbJ-XR-v16" kind="show" identifier="fromHomeToFeedSegue" id="rRv-h6-f68"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -108,7 +111,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I0l-cn-exH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1783" y="-114"/>
+            <point key="canvasLocation" x="-93" y="-283"/>
         </scene>
         <!--Post-->
         <scene sceneID="B7L-sM-5Xi">

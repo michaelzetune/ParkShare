@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class LoginViewController: UIViewController {
 
@@ -16,13 +17,32 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        emailField.autocorrectionType = .no
+        passwordField.autocorrectionType = .no
 
         // Do any additional setup after loading the view.
     }
     
     @IBAction func loginButtonPressed(_ sender: Any) {
-
-        self.performSegue(withIdentifier: "fromLoginToListingsSegue", sender: nil)
+        
+        if (emailField.text!.isEmpty || passwordField.text!.isEmpty) {
+            let emptyFieldsAlert = UIAlertController(title: "Fields Empty", message: "One or more fields are empty. Try again", preferredStyle: .alert)
+            emptyFieldsAlert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.present(emptyFieldsAlert, animated: true)
+        }
+        
+        PFUser.logInWithUsername(inBackground: emailField.text!, password: passwordField.text!) { (user, error) in
+            if user != nil {
+                self.performSegue(withIdentifier: "fromLoginToListingsSegue", sender: nil)
+            } else {
+                let badCredentialsAlert = UIAlertController(title: "Bad Credentials", message: "Your email or password is incorrect. Try again", preferredStyle: .alert)
+                badCredentialsAlert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: { action in
+                    self.passwordField.text = ""
+                }))
+                self.present(badCredentialsAlert, animated: true)
+            }
+        }
 
     }
     
