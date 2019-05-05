@@ -7,4 +7,5 @@ target 'ParkShare' do
 
   # Pods for ParkShare
   pod 'Parse'
+  pod 'AlamofireImage'
 end
