@@ -20,6 +20,10 @@ class LoginViewController: UIViewController {
         
         emailField.autocorrectionType = .no
         passwordField.autocorrectionType = .no
+        
+        // ***for testing. remove later****
+        emailField.text = "test@test.com"
+        passwordField.text = "test123"
 
         // Do any additional setup after loading the view.
     }
