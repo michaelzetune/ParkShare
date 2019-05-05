@@ -52,7 +52,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCZ-MR-uVc">
-                                            <rect key="frame" x="16" y="45" width="137" height="135"/>
+                                            <rect key="frame" x="16" y="45" width="185" height="135"/>
                                             <string key="text">1 spot open
 60$ a month
 Uncovered
@@ -70,6 +70,7 @@ Street Level Parking
                                         <constraint firstItem="KCZ-MR-uVc" firstAttribute="top" secondItem="QSR-zk-WBc" secondAttribute="top" id="Dlc-lD-9cE"/>
                                         <constraint firstItem="ciN-NS-HOX" firstAttribute="top" secondItem="CJO-1b-jTU" secondAttribute="top" constant="19" id="HXM-1n-1yp"/>
                                         <constraint firstItem="bEi-E7-Rcz" firstAttribute="leading" secondItem="vey-TT-9cZ" secondAttribute="trailing" constant="18.5" id="LX2-oS-MSE"/>
+                                        <constraint firstItem="QSR-zk-WBc" firstAttribute="leading" secondItem="KCZ-MR-uVc" secondAttribute="trailing" constant="10" id="Oa0-TG-nCP"/>
                                         <constraint firstItem="QSR-zk-WBc" firstAttribute="top" secondItem="ciN-NS-HOX" secondAttribute="bottom" constant="8" id="SVz-x1-OPl"/>
                                         <constraint firstAttribute="trailing" secondItem="QSR-zk-WBc" secondAttribute="trailing" constant="16" id="XNZ-i3-TRp"/>
                                         <constraint firstItem="vey-TT-9cZ" firstAttribute="top" secondItem="KCZ-MR-uVc" secondAttribute="bottom" constant="19" id="ev1-XM-TYF"/>
@@ -104,6 +105,9 @@ Street Level Parking
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="73q-ox-UhM" id="6Vl-lr-qGP"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hql-cZ-pPL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

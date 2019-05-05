@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import Parse
+import AlamofireImage
 
 class FeedTableViewController: UITableViewController, FilterDelegate {
     
     var currentMaxCostFilter: Int = 100 // gets set again by FeedFilterViewController
+    var posts = [PFObject]()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,28 +28,49 @@ class FeedTableViewController: UITableViewController, FilterDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        print("current max: \(currentMaxCostFilter)")
+        super.viewDidAppear(animated)
+        
+        print("view appeared")
+        
+        let query = PFQuery(className: "Post")
+        query.includeKeys(["author", "title", "parkingImage", "description",
+                           "location", "monthlyPrice", "parkingType", "availableDates", "phoneNumber"])
+        query.limit = 100
+        
+        query.findObjectsInBackground { (posts, error) in
+            if posts != nil {
+                self.posts = posts!
+                self.tableView.reloadData()
+            }
+        }
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 50
+        return posts.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 50
+        return 1
     }
 
    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListingCell") as! ListingCell
 
-        cell.titleLabel!.text = "Hello"
-        cell.infospotLabel!.text = "What's up"
-        cell.profilepicImage.image = UIImage(named: "profilepic")
-        cell.usernameLabel!.text = "Hello"
-        cell.parkingImage!.image = UIImage(named: "parkingspace")
+        let currentPost = posts[indexPath.section]
+//        let user = currentPost["author"] as! PFUser
+        
+        cell.titleLabel!.text = currentPost["title"] as? String
+        cell.infospotLabel!.text = currentPost["description"] as? String
+        cell.profilepicImage.image = UIImage(named: "profilepic") // TODO: change
+//        cell.usernameLabel!.text = user.username
+        
+        let parkingImageFile = currentPost["parkingImage"] as! PFFileObject
+        let urlString = parkingImageFile.url!
+        let url = URL(string: urlString)!
+        cell.parkingImage.af_setImage(withURL: url)
 
         return cell
     }
