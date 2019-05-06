@@ -60,17 +60,25 @@ class FeedTableViewController: UITableViewController, FilterDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListingCell") as! ListingCell
 
         let currentPost = posts[indexPath.section]
-//        let user = currentPost["author"] as! PFUser
+        let user = currentPost["author"] as! PFUser
         
         cell.titleLabel!.text = currentPost["title"] as? String
         cell.infospotLabel!.text = currentPost["description"] as? String
-        cell.profilepicImage.image = UIImage(named: "profilepic") // TODO: change
-//        cell.usernameLabel!.text = user.username
+        
+        cell.usernameLabel!.text = user["name"] as? String
+        
+        if let profilePicFile = user["profilePicture"] as? PFFileObject {
+            let profilePicUrlString = profilePicFile.url!
+            let profilePicUrl = URL(string: profilePicUrlString)!
+            cell.profilepicImage.af_setImage(withURL: profilePicUrl)
+        } else {
+            cell.profilepicImage.image = UIImage(contentsOfFile: "profilepic")
+        }
         
         let parkingImageFile = currentPost["parkingImage"] as! PFFileObject
-        let urlString = parkingImageFile.url!
-        let url = URL(string: urlString)!
-        cell.parkingImage.af_setImage(withURL: url)
+        let parkingImageUrlString = parkingImageFile.url!
+        let parkingImageUrl = URL(string: parkingImageUrlString)!
+        cell.parkingImage.af_setImage(withURL: parkingImageUrl)
 
         return cell
     }
