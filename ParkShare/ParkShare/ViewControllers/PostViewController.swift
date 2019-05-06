@@ -16,6 +16,7 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var PriceField: UITextField!
     @IBOutlet weak var typeCovering: UISegmentedControl!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var phoneNumber: UITextField!
     
     @IBAction func pictureButtonPressed(_ sender: Any) {
         let picker = UIImagePickerController()
@@ -39,11 +40,12 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         post["description"] = descriptionTextView.text
         post["monthlyPrice"] = Int(PriceField.text!)
         post["parkingType"] = typeCovering.titleForSegment(at: typeCovering.selectedSegmentIndex)
+        post["phoneNumber"] = Int(phoneNumber.text!)
         
         let imageData = imageView.image!.pngData()
         let file = PFFileObject(data: imageData!)
         
-        post["image"] = file
+        post["parkingImage"] = file
         
             post.saveInBackground { (success, error) in
                 if success {

@@ -74,6 +74,12 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NTY-I6-rol">
                                 <rect key="frame" x="288" y="192" width="76" height="76"/>
                             </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IpM-Kc-JAM">
+                                <rect key="frame" x="119" y="302" width="203" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -86,15 +92,19 @@
                             <constraint firstItem="gfX-5g-In9" firstAttribute="top" secondItem="jze-n4-rm2" secondAttribute="bottom" constant="230" id="JX9-jj-32a"/>
                             <constraint firstItem="yvP-Cz-pvV" firstAttribute="leading" secondItem="Ccj-ps-GtZ" secondAttribute="trailing" constant="29" id="MkR-iP-LZb"/>
                             <constraint firstItem="yvP-Cz-pvV" firstAttribute="top" secondItem="Wrk-b5-20U" secondAttribute="top" constant="373" id="NfZ-v9-Sxi"/>
+                            <constraint firstItem="IpM-Kc-JAM" firstAttribute="leading" secondItem="Wrk-b5-20U" secondAttribute="leading" constant="119" id="PIK-yX-gAT"/>
                             <constraint firstItem="Wrk-b5-20U" firstAttribute="trailing" secondItem="NTY-I6-rol" secondAttribute="trailing" constant="50" id="Pfh-vG-Cy4"/>
                             <constraint firstItem="VkR-RB-D3a" firstAttribute="top" secondItem="ehH-w1-e2G" secondAttribute="bottom" constant="22" id="QC5-oZ-Avx"/>
+                            <constraint firstItem="Wrk-b5-20U" firstAttribute="trailing" secondItem="IpM-Kc-JAM" secondAttribute="trailing" constant="92" id="Qnu-fh-nkO"/>
                             <constraint firstItem="jze-n4-rm2" firstAttribute="leading" secondItem="ehH-w1-e2G" secondAttribute="leading" id="RZq-RG-CYc"/>
                             <constraint firstItem="NTY-I6-rol" firstAttribute="leading" secondItem="VkR-RB-D3a" secondAttribute="trailing" constant="18.5" id="THl-Sd-jqH"/>
                             <constraint firstItem="gfX-5g-In9" firstAttribute="top" secondItem="yvP-Cz-pvV" secondAttribute="bottom" constant="7" id="UHd-RK-PEa"/>
                             <constraint firstItem="Wrk-b5-20U" firstAttribute="trailing" secondItem="gfX-5g-In9" secondAttribute="trailing" constant="50" id="a77-SG-htp"/>
+                            <constraint firstItem="IpM-Kc-JAM" firstAttribute="leading" secondItem="fbO-hx-GWi" secondAttribute="leading" id="aem-IR-eoa"/>
                             <constraint firstItem="Ccj-ps-GtZ" firstAttribute="leading" secondItem="Wrk-b5-20U" secondAttribute="leading" constant="20" id="bCi-La-KOH"/>
                             <constraint firstItem="Ccj-ps-GtZ" firstAttribute="top" secondItem="jze-n4-rm2" secondAttribute="bottom" constant="193" id="cTL-cm-uvM"/>
                             <constraint firstItem="NTY-I6-rol" firstAttribute="top" secondItem="ehH-w1-e2G" secondAttribute="bottom" constant="9" id="eZf-FB-zuu"/>
+                            <constraint firstItem="Ccj-ps-GtZ" firstAttribute="top" secondItem="IpM-Kc-JAM" secondAttribute="bottom" constant="129" id="ehs-Jj-TiX"/>
                             <constraint firstItem="jze-n4-rm2" firstAttribute="top" secondItem="VkR-RB-D3a" secondAttribute="bottom" constant="3" id="h4s-J7-RhT"/>
                             <constraint firstItem="fbO-hx-GWi" firstAttribute="centerX" secondItem="Wrk-b5-20U" secondAttribute="centerX" id="jGX-ZI-Itu"/>
                             <constraint firstItem="yvP-Cz-pvV" firstAttribute="top" secondItem="NTY-I6-rol" secondAttribute="bottom" constant="193" id="lcU-mb-G5n"/>
@@ -104,6 +114,7 @@
                             <constraint firstItem="Wrk-b5-20U" firstAttribute="trailing" secondItem="ehH-w1-e2G" secondAttribute="trailing" constant="50" id="vPo-9C-FdV"/>
                             <constraint firstItem="gfX-5g-In9" firstAttribute="centerX" secondItem="Wrk-b5-20U" secondAttribute="centerX" id="wIC-O8-z4P"/>
                             <constraint firstItem="iV2-8g-GQH" firstAttribute="centerX" secondItem="Wrk-b5-20U" secondAttribute="centerX" id="ytA-Xf-1F1"/>
+                            <constraint firstItem="IpM-Kc-JAM" firstAttribute="top" secondItem="jze-n4-rm2" secondAttribute="bottom" constant="34" id="zOO-Fb-A4f"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Wrk-b5-20U"/>
                     </view>
@@ -113,6 +124,7 @@
                         <outlet property="descriptionTextView" destination="gfX-5g-In9" id="PJs-nC-3Iu"/>
                         <outlet property="imageView" destination="NTY-I6-rol" id="eUG-KM-AmA"/>
                         <outlet property="listingNameLabel" destination="fbO-hx-GWi" id="LPO-2C-4ko"/>
+                        <outlet property="phoneNumber" destination="IpM-Kc-JAM" id="3kv-sb-HWK"/>
                         <outlet property="titleField" destination="ehH-w1-e2G" id="jBP-wI-QHU"/>
                         <outlet property="typeCovering" destination="Ccj-ps-GtZ" id="pLK-V4-zpF"/>
                     </connections>
