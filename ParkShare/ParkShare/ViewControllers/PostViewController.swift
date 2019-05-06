@@ -5,13 +5,17 @@
 //  Created by Jonathan Bautista on 4/8/19.
 //  Copyright © 2019 Michael Zetune. All rights reserved.
 //
-
+import Parse
 import UIKit
 
 class PostViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var listingNameLabel: UILabel!
     @IBOutlet weak var titleField: UITextField!
+    @IBOutlet weak var descriptionTextView: UITextView!
+    @IBOutlet weak var PriceField: UITextField!
+    @IBOutlet weak var typeCovering: UISegmentedControl!
+    @IBOutlet weak var imageView: UIImageView!
     
     @IBAction func pictureButtonPressed(_ sender: Any) {
         let picker = UIImagePickerController()
@@ -25,10 +29,40 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         }
         present(picker, animated:true, completion: nil)
         
+        
     }
     
     @IBAction func createListingButtonPressed(_ sender: Any) {
+        let post = PFObject(className: "Post")
+        post["author"] = PFUser.current()!
+        post["title"] = titleField.text
+        post["description"] = descriptionTextView.text
+        post["monthlyPrice"] = Int(PriceField.text!)
+        post["parkingType"] = typeCovering.titleForSegment(at: typeCovering.selectedSegmentIndex)
+        
+        let imageData = imageView.image!.pngData()
+        let file = PFFileObject(data: imageData!)
+        
+        post["image"] = file
+        
+            post.saveInBackground { (success, error) in
+                if success {
+                    self.dismiss(animated: true, completion: nil)
+                    print("saved!")
+                } else {
+                    print("error!")
+                }
+        }
         performSegue(withIdentifier: "postToFeed", sender: self)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        let image = info[.editedImage] as! UIImage
+        
+        imageView.image = image
+        
+        dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
