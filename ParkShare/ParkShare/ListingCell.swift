@@ -14,6 +14,7 @@ class ListingCell: UITableViewCell {
     @IBOutlet weak var profilepicImage: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var parkingImage: UIImageView!
+    @IBOutlet weak var priceLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

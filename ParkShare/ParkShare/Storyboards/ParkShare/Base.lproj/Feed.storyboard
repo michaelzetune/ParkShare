@@ -62,6 +62,12 @@ Street Level Parking
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$100/month" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxU-bp-64i">
+                                            <rect key="frame" x="300" y="214" width="94" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="bEi-E7-Rcz" firstAttribute="centerY" secondItem="vey-TT-9cZ" secondAttribute="centerY" id="4ER-mV-5dU"/>
@@ -72,8 +78,10 @@ Street Level Parking
                                         <constraint firstItem="bEi-E7-Rcz" firstAttribute="leading" secondItem="vey-TT-9cZ" secondAttribute="trailing" constant="18.5" id="LX2-oS-MSE"/>
                                         <constraint firstItem="QSR-zk-WBc" firstAttribute="leading" secondItem="KCZ-MR-uVc" secondAttribute="trailing" constant="10" id="Oa0-TG-nCP"/>
                                         <constraint firstItem="QSR-zk-WBc" firstAttribute="top" secondItem="ciN-NS-HOX" secondAttribute="bottom" constant="8" id="SVz-x1-OPl"/>
+                                        <constraint firstAttribute="bottom" secondItem="mxU-bp-64i" secondAttribute="bottom" constant="24.5" id="WuV-nC-cdV"/>
                                         <constraint firstAttribute="trailing" secondItem="QSR-zk-WBc" secondAttribute="trailing" constant="16" id="XNZ-i3-TRp"/>
                                         <constraint firstItem="vey-TT-9cZ" firstAttribute="top" secondItem="KCZ-MR-uVc" secondAttribute="bottom" constant="19" id="ev1-XM-TYF"/>
+                                        <constraint firstAttribute="trailing" secondItem="mxU-bp-64i" secondAttribute="trailing" constant="20" id="gh1-HL-zBh"/>
                                         <constraint firstItem="KCZ-MR-uVc" firstAttribute="leading" secondItem="ciN-NS-HOX" secondAttribute="leading" id="qwd-ZZ-aEh"/>
                                         <constraint firstItem="ciN-NS-HOX" firstAttribute="leading" secondItem="CJO-1b-jTU" secondAttribute="leading" constant="16" id="tVN-tj-LSw"/>
                                     </constraints>
@@ -81,6 +89,7 @@ Street Level Parking
                                 <connections>
                                     <outlet property="infospotLabel" destination="KCZ-MR-uVc" id="UqC-Ue-Q2Y"/>
                                     <outlet property="parkingImage" destination="QSR-zk-WBc" id="kMZ-UT-oYt"/>
+                                    <outlet property="priceLabel" destination="mxU-bp-64i" id="rGL-wl-COq"/>
                                     <outlet property="profilepicImage" destination="vey-TT-9cZ" id="jB3-lz-QP0"/>
                                     <outlet property="titleLabel" destination="ciN-NS-HOX" id="CZD-5Y-qv4"/>
                                     <outlet property="usernameLabel" destination="bEi-E7-Rcz" id="BBI-Ji-p1c"/>
