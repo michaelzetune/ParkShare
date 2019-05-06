@@ -72,13 +72,16 @@ class FeedTableViewController: UITableViewController, FilterDelegate {
             let profilePicUrl = URL(string: profilePicUrlString)!
             cell.profilepicImage.af_setImage(withURL: profilePicUrl)
         } else {
-            cell.profilepicImage.image = UIImage(contentsOfFile: "profilepic")
+            cell.profilepicImage.image = UIImage(named: "default-avatar")
         }
         
-        let parkingImageFile = currentPost["parkingImage"] as! PFFileObject
-        let parkingImageUrlString = parkingImageFile.url!
-        let parkingImageUrl = URL(string: parkingImageUrlString)!
-        cell.parkingImage.af_setImage(withURL: parkingImageUrl)
+        if let parkingImageFile = currentPost["parkingImage"] as? PFFileObject {
+            let parkingImageUrlString = parkingImageFile.url!
+            let parkingImageUrl = URL(string: parkingImageUrlString)!
+            cell.parkingImage.af_setImage(withURL: parkingImageUrl)
+        } else {
+            // do nothing, we can leave the pic blank.
+        }
 
         return cell
     }
