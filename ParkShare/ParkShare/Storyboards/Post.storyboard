@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Posting-->
+        <!--New Listing-->
         <scene sceneID="dsq-RZ-b8X">
             <objects>
                 <viewController id="Jub-gY-IQF" customClass="PostViewController" customModule="ParkShare" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,17 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="New Listing!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbO-hx-GWi">
-                                <rect key="frame" x="119" y="83" width="136" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter a Title" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ehH-w1-e2G">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a Title..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ehH-w1-e2G">
                                 <rect key="frame" x="50" y="153" width="314" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VkR-RB-D3a">
                                 <rect key="frame" x="144.5" y="205" width="125" height="36"/>
@@ -37,14 +31,8 @@
                                     <action selector="pictureButtonPressed:" destination="Jub-gY-IQF" eventType="touchUpInside" id="kl9-6c-7Xq"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick available dates..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jze-n4-rm2">
-                                <rect key="frame" x="50" y="244" width="187" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iV2-8g-GQH">
-                                <rect key="frame" x="148" y="799" width="118" height="35"/>
+                                <rect key="frame" x="148" y="827" width="118" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Create Listing"/>
                                 <connections>
@@ -53,77 +41,72 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Please Type a Description..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gfX-5g-In9">
-                                <rect key="frame" x="50" y="498" width="314" height="262"/>
+                                <rect key="frame" x="50" y="508" width="314" height="304"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yvP-Cz-pvV">
-                                <rect key="frame" x="266" y="461" width="98" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Monthly Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yvP-Cz-pvV">
+                                <rect key="frame" x="268" y="409" width="121" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ccj-ps-GtZ">
-                                <rect key="frame" x="20" y="461" width="217" height="28"/>
+                                <rect key="frame" x="20" y="410" width="223" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="223" id="FpQ-DS-ECR"/>
+                                </constraints>
                                 <segments>
-                                    <segment title="Street-Covered"/>
+                                    <segment title="Street-Level"/>
                                     <segment title="Garage"/>
                                 </segments>
                             </segmentedControl>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NTY-I6-rol">
-                                <rect key="frame" x="288" y="192" width="76" height="76"/>
+                                <rect key="frame" x="116.5" y="249" width="181" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="181" id="Ykw-Pc-kbS"/>
+                                    <constraint firstAttribute="height" constant="125" id="jrr-WJ-uHe"/>
+                                </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IpM-Kc-JAM">
-                                <rect key="frame" x="119" y="302" width="203" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="phone number here..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IpM-Kc-JAM">
+                                <rect key="frame" x="127" y="460" width="160" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="yes" keyboardType="phonePad" returnKeyType="done" smartDashesType="yes" textContentType="tel"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="fbO-hx-GWi" firstAttribute="top" secondItem="Wrk-b5-20U" secondAttribute="top" constant="19" id="3UI-S3-TMg"/>
-                            <constraint firstItem="yvP-Cz-pvV" firstAttribute="leading" secondItem="Wrk-b5-20U" secondAttribute="leading" constant="266" id="4g1-sC-Lvj"/>
-                            <constraint firstItem="gfX-5g-In9" firstAttribute="leading" secondItem="Wrk-b5-20U" secondAttribute="leading" constant="50" id="9un-ZV-adJ"/>
-                            <constraint firstItem="Wrk-b5-20U" firstAttribute="bottom" secondItem="iV2-8g-GQH" secondAttribute="bottom" constant="28" id="EJB-lW-vNc"/>
-                            <constraint firstItem="iV2-8g-GQH" firstAttribute="top" secondItem="gfX-5g-In9" secondAttribute="bottom" constant="39" id="FrH-hx-saT"/>
+                            <constraint firstItem="gfX-5g-In9" firstAttribute="leading" secondItem="Wrk-b5-20U" secondAttribute="leading" constant="50" id="3MO-e7-JOM"/>
+                            <constraint firstItem="Ccj-ps-GtZ" firstAttribute="leading" secondItem="Wrk-b5-20U" secondAttribute="leading" constant="20" id="3rC-ac-dhD"/>
+                            <constraint firstItem="Wrk-b5-20U" firstAttribute="trailing" secondItem="gfX-5g-In9" secondAttribute="trailing" constant="50" id="48K-eI-ZCF"/>
+                            <constraint firstItem="iV2-8g-GQH" firstAttribute="centerX" secondItem="Wrk-b5-20U" secondAttribute="centerX" id="6SK-BJ-IaV"/>
+                            <constraint firstItem="Wrk-b5-20U" firstAttribute="bottom" secondItem="iV2-8g-GQH" secondAttribute="bottom" id="B6l-zE-sQA"/>
+                            <constraint firstItem="yvP-Cz-pvV" firstAttribute="top" secondItem="NTY-I6-rol" secondAttribute="bottom" constant="35" id="EyA-ix-JHG"/>
                             <constraint firstItem="ehH-w1-e2G" firstAttribute="top" secondItem="Wrk-b5-20U" secondAttribute="top" constant="65" id="Hjf-Of-yxx"/>
-                            <constraint firstItem="gfX-5g-In9" firstAttribute="top" secondItem="jze-n4-rm2" secondAttribute="bottom" constant="230" id="JX9-jj-32a"/>
-                            <constraint firstItem="yvP-Cz-pvV" firstAttribute="leading" secondItem="Ccj-ps-GtZ" secondAttribute="trailing" constant="29" id="MkR-iP-LZb"/>
-                            <constraint firstItem="yvP-Cz-pvV" firstAttribute="top" secondItem="Wrk-b5-20U" secondAttribute="top" constant="373" id="NfZ-v9-Sxi"/>
-                            <constraint firstItem="IpM-Kc-JAM" firstAttribute="leading" secondItem="Wrk-b5-20U" secondAttribute="leading" constant="119" id="PIK-yX-gAT"/>
-                            <constraint firstItem="Wrk-b5-20U" firstAttribute="trailing" secondItem="NTY-I6-rol" secondAttribute="trailing" constant="50" id="Pfh-vG-Cy4"/>
-                            <constraint firstItem="VkR-RB-D3a" firstAttribute="top" secondItem="ehH-w1-e2G" secondAttribute="bottom" constant="22" id="QC5-oZ-Avx"/>
-                            <constraint firstItem="Wrk-b5-20U" firstAttribute="trailing" secondItem="IpM-Kc-JAM" secondAttribute="trailing" constant="92" id="Qnu-fh-nkO"/>
-                            <constraint firstItem="jze-n4-rm2" firstAttribute="leading" secondItem="ehH-w1-e2G" secondAttribute="leading" id="RZq-RG-CYc"/>
-                            <constraint firstItem="NTY-I6-rol" firstAttribute="leading" secondItem="VkR-RB-D3a" secondAttribute="trailing" constant="18.5" id="THl-Sd-jqH"/>
-                            <constraint firstItem="gfX-5g-In9" firstAttribute="top" secondItem="yvP-Cz-pvV" secondAttribute="bottom" constant="7" id="UHd-RK-PEa"/>
-                            <constraint firstItem="Wrk-b5-20U" firstAttribute="trailing" secondItem="gfX-5g-In9" secondAttribute="trailing" constant="50" id="a77-SG-htp"/>
-                            <constraint firstItem="IpM-Kc-JAM" firstAttribute="leading" secondItem="fbO-hx-GWi" secondAttribute="leading" id="aem-IR-eoa"/>
-                            <constraint firstItem="Ccj-ps-GtZ" firstAttribute="leading" secondItem="Wrk-b5-20U" secondAttribute="leading" constant="20" id="bCi-La-KOH"/>
-                            <constraint firstItem="Ccj-ps-GtZ" firstAttribute="top" secondItem="jze-n4-rm2" secondAttribute="bottom" constant="193" id="cTL-cm-uvM"/>
-                            <constraint firstItem="NTY-I6-rol" firstAttribute="top" secondItem="ehH-w1-e2G" secondAttribute="bottom" constant="9" id="eZf-FB-zuu"/>
-                            <constraint firstItem="Ccj-ps-GtZ" firstAttribute="top" secondItem="IpM-Kc-JAM" secondAttribute="bottom" constant="129" id="ehs-Jj-TiX"/>
-                            <constraint firstItem="jze-n4-rm2" firstAttribute="top" secondItem="VkR-RB-D3a" secondAttribute="bottom" constant="3" id="h4s-J7-RhT"/>
-                            <constraint firstItem="fbO-hx-GWi" firstAttribute="centerX" secondItem="Wrk-b5-20U" secondAttribute="centerX" id="jGX-ZI-Itu"/>
-                            <constraint firstItem="yvP-Cz-pvV" firstAttribute="top" secondItem="NTY-I6-rol" secondAttribute="bottom" constant="193" id="lcU-mb-G5n"/>
-                            <constraint firstItem="gfX-5g-In9" firstAttribute="top" secondItem="Ccj-ps-GtZ" secondAttribute="bottom" constant="10" id="nBJ-1M-VcK"/>
+                            <constraint firstItem="iV2-8g-GQH" firstAttribute="top" secondItem="gfX-5g-In9" secondAttribute="bottom" constant="15" id="LXs-JK-BRh"/>
+                            <constraint firstItem="gfX-5g-In9" firstAttribute="centerX" secondItem="Wrk-b5-20U" secondAttribute="centerX" id="Qie-4B-GTV"/>
+                            <constraint firstItem="VkR-RB-D3a" firstAttribute="centerX" secondItem="Wrk-b5-20U" secondAttribute="centerX" id="RvZ-ow-xV1"/>
+                            <constraint firstItem="yvP-Cz-pvV" firstAttribute="leading" secondItem="Ccj-ps-GtZ" secondAttribute="trailing" constant="25" id="Vot-yg-Ywj"/>
+                            <constraint firstItem="IpM-Kc-JAM" firstAttribute="top" secondItem="Ccj-ps-GtZ" secondAttribute="bottom" constant="22" id="Ytw-4b-Z4a"/>
+                            <constraint firstItem="gfX-5g-In9" firstAttribute="top" secondItem="Ccj-ps-GtZ" secondAttribute="bottom" constant="70" id="Zc6-xw-dOp"/>
+                            <constraint firstItem="NTY-I6-rol" firstAttribute="top" secondItem="VkR-RB-D3a" secondAttribute="bottom" constant="8" id="egU-um-eDt"/>
+                            <constraint firstItem="Wrk-b5-20U" firstAttribute="trailing" secondItem="yvP-Cz-pvV" secondAttribute="trailing" constant="25" id="gFO-Kb-pcN"/>
+                            <constraint firstItem="NTY-I6-rol" firstAttribute="centerX" secondItem="Wrk-b5-20U" secondAttribute="centerX" id="gJV-84-P0P"/>
                             <constraint firstItem="ehH-w1-e2G" firstAttribute="leading" secondItem="Wrk-b5-20U" secondAttribute="leading" constant="50" id="nuB-ou-zIF"/>
-                            <constraint firstItem="VkR-RB-D3a" firstAttribute="centerX" secondItem="ehH-w1-e2G" secondAttribute="centerX" id="qh7-yV-2qb"/>
                             <constraint firstItem="Wrk-b5-20U" firstAttribute="trailing" secondItem="ehH-w1-e2G" secondAttribute="trailing" constant="50" id="vPo-9C-FdV"/>
-                            <constraint firstItem="gfX-5g-In9" firstAttribute="centerX" secondItem="Wrk-b5-20U" secondAttribute="centerX" id="wIC-O8-z4P"/>
-                            <constraint firstItem="iV2-8g-GQH" firstAttribute="centerX" secondItem="Wrk-b5-20U" secondAttribute="centerX" id="ytA-Xf-1F1"/>
-                            <constraint firstItem="IpM-Kc-JAM" firstAttribute="top" secondItem="jze-n4-rm2" secondAttribute="bottom" constant="34" id="zOO-Fb-A4f"/>
+                            <constraint firstItem="VkR-RB-D3a" firstAttribute="top" secondItem="ehH-w1-e2G" secondAttribute="bottom" constant="22" id="xdK-Dk-ODh"/>
+                            <constraint firstItem="Ccj-ps-GtZ" firstAttribute="top" secondItem="NTY-I6-rol" secondAttribute="bottom" constant="36" id="y3e-YQ-Sf8"/>
+                            <constraint firstItem="IpM-Kc-JAM" firstAttribute="centerX" secondItem="Wrk-b5-20U" secondAttribute="centerX" id="zEv-gI-jSd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Wrk-b5-20U"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Posting" id="Unu-J2-Wn1"/>
+                    <navigationItem key="navigationItem" title="New Listing" id="Unu-J2-Wn1"/>
                     <connections>
                         <outlet property="PriceField" destination="yvP-Cz-pvV" id="shb-R2-aMs"/>
                         <outlet property="descriptionTextView" destination="gfX-5g-In9" id="PJs-nC-3Iu"/>
                         <outlet property="imageView" destination="NTY-I6-rol" id="eUG-KM-AmA"/>
-                        <outlet property="listingNameLabel" destination="fbO-hx-GWi" id="LPO-2C-4ko"/>
                         <outlet property="phoneNumber" destination="IpM-Kc-JAM" id="3kv-sb-HWK"/>
                         <outlet property="titleField" destination="ehH-w1-e2G" id="jBP-wI-QHU"/>
                         <outlet property="typeCovering" destination="Ccj-ps-GtZ" id="pLK-V4-zpF"/>

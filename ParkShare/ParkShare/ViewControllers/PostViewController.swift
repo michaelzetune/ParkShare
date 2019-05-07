@@ -10,13 +10,22 @@ import UIKit
 
 class PostViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    @IBOutlet weak var listingNameLabel: UILabel!
     @IBOutlet weak var titleField: UITextField!
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var PriceField: UITextField!
     @IBOutlet weak var typeCovering: UISegmentedControl!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var phoneNumber: UITextField!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(PostViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+        
+        // Do any additional setup after loading the view.
+    }
     
     @IBAction func pictureButtonPressed(_ sender: Any) {
         let picker = UIImagePickerController()
@@ -29,8 +38,6 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             picker.sourceType = .photoLibrary
         }
         present(picker, animated:true, completion: nil)
-        
-        
     }
     
     @IBAction func createListingButtonPressed(_ sender: Any) {
@@ -67,13 +74,12 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         dismiss(animated: true, completion: nil)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    @objc func dismissKeyboard(){
+        view.endEditing(true)
     }
-
-
+    
+    
+    
 
     /*
     // MARK: - Navigation
