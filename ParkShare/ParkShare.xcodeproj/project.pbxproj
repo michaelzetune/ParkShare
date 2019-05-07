@@ -12,6 +12,7 @@
 		135CA7CD225B9E62007620C4 /* ListingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135CA7CC225B9E62007620C4 /* ListingCell.swift */; };
 		135CA7CF225B9E86007620C4 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135CA7CE225B9E86007620C4 /* PostViewController.swift */; };
 		135CA7D1225B9EB9007620C4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135CA7D0225B9EB9007620C4 /* MapViewController.swift */; };
+		4C60CE5D2281D76700BA506F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C60CE5C2281D76700BA506F /* CoreLocation.framework */; };
 		4CA00A292262AEFA0062AA26 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA00A282262AEFA0062AA26 /* LoginViewController.swift */; };
 		4CA00A2B2262B0410062AA26 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA00A2A2262B0410062AA26 /* CreateAccountViewController.swift */; };
 		4CE2104E225A4B4B00856191 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE2104D225A4B4B00856191 /* AppDelegate.swift */; };
@@ -40,6 +41,7 @@
 		135CA7D0225B9EB9007620C4 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		1E71F65266E97F10099E95B5 /* Pods-ParkShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkShare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParkShare/Pods-ParkShare.debug.xcconfig"; sourceTree = "<group>"; };
 		3355A55F68D82C7449C9C538 /* Pods-ParkShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkShare.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParkShare/Pods-ParkShare.release.xcconfig"; sourceTree = "<group>"; };
+		4C60CE5C2281D76700BA506F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		4CA00A282262AEFA0062AA26 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4CA00A2A2262B0410062AA26 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		4CE2104A225A4B4B00856191 /* ParkShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParkShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C60CE5D2281D76700BA506F /* CoreLocation.framework in Frameworks */,
 				AF7D3CE063CB704D3071E6F2 /* Pods_ParkShare.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,6 +153,7 @@
 		F83266AB605977816CCD08CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4C60CE5C2281D76700BA506F /* CoreLocation.framework */,
 				8D684B2FC74E62EB0B5E0FC8 /* Pods_ParkShare.framework */,
 			);
 			name = Frameworks;

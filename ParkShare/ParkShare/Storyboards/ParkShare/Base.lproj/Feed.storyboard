@@ -110,7 +110,7 @@ Street Level Parking
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Map" id="sGs-SO-fb5">
                             <connections>
-                                <segue destination="yit-G6-cpK" kind="show" id="dCA-np-KRL"/>
+                                <segue destination="yit-G6-cpK" kind="showDetail" id="dCA-np-KRL"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -145,7 +145,7 @@ Street Level Parking
                 <viewControllerPlaceholder storyboardName="ViewPosting" id="gBK-vg-v0K" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3cD-Ly-LRz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3790" y="-866"/>
+            <point key="canvasLocation" x="3775" y="-323"/>
         </scene>
         <!--Map-->
         <scene sceneID="40N-Kx-PcO">
