@@ -76,5 +76,114 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
 //
         self.mapView.showsUserLocation = true
     }
+    
+    //    override func viewDidLoad() {
+    //        super.viewDidLoad()
+    //
+    //        manager.delegate = self
+    //        manager.desiredAccuracy = kCLLocationAccuracyBest
+    //        manager.requestWhenInUseAuthorization()
+    //        manager.startUpdatingLocation()
+    //
+    ////        let location = CLLocationCoordinate2DMake(30.285172, -97.735743)
+    ////
+    ////        let annotation = MKPointAnnotation()
+    ////        annotation.coordinate = location
+    ////        annotation.title = "2200 Neuces St"
+    ////        annotation.subtitle = "$1500"
+    ////        mapView.addAnnotation(annotation)
+    //        // Do any additional setup after loading the view.
+    //    }
+    
+    //    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    //        let location = locations[0]
+    //
+    //        let span:MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+    //        let myLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
+    //        let region:MKCoordinateRegion = MKCoordinateRegion(center: myLocation, span: span)
+    //        mapView.setRegion(region, animated: true)
+    //
+    //        self.mapView.showsUserLocation = true
+    //    }
+    
+    //    fileprivate var searchController: UISearchController!
+    //    fileprivate var localSearchRequest: MKLocalSearch.Request!
+    //    fileprivate var localSearch: MKLocalSearch!
+    //    fileprivate var localSearchResponse: MKLocalSearch.Response!
+    
+//    @objc func currentLocationButtonAction(_ sender: UIBarButtonItem) {
+//
+//        }
+//    }
+    
+//    @objc func searchButtonAction(_ button: UIBarButtonItem) {
+//        if searchController == nil {
+//            searchController = UISearchController(searchResultsController: nil)
+//        }
+//        searchController.hidesNavigationBarDuringPresentation = false
+//        self.searchController.searchBar.delegate = self
+//        present(searchController, animated: true, completion: nil)
+//    }
+    
+    
+    // MARK: - Activity Indicator
+    
+    
+    // MARK: - UIViewController's methods
+    
+    
+    // MARK: - Actions
+    
+
+    
+    // MARK: - Search
+    
+
+    
+    // MARK: - UISearchBarDelegate
+    
+//    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+//        searchBar.resignFirstResponder()
+//        dismiss(animated: true, completion: nil)
+//
+//        if self.mapView.annotations.count != 0 {
+//            annotation = self.mapView.annotations[0]
+//            self.mapView.removeAnnotation(annotation)
+//        }
+//
+//        localSearchRequest = MKLocalSearch.Request()
+//        localSearchRequest.naturalLanguageQuery = searchBar.text
+//        localSearch = MKLocalSearch(request: localSearchRequest)
+//        localSearch.start { [weak self] (localSearchResponse, error) -> Void in
+//
+//            if localSearchResponse == nil {
+////                let alert = UIAlertView(title: nil, message: "Place not found", delegate: self, cancelButtonTitle: "Try again")
+////                let alert = UIAlertController(title: nil, message: "Place not found", preferredStyle: .alert)
+//                return
+//            }
+//
+//            let pointAnnotation = MKPointAnnotation()
+//            pointAnnotation.title = searchBar.text
+//            pointAnnotation.coordinate = CLLocationCoordinate2D(latitude: localSearchResponse!.boundingRegion.center.latitude, longitude: localSearchResponse!.boundingRegion.center.longitude)
+//
+//            let pinAnnotationView = MKPinAnnotationView(annotation: pointAnnotation, reuseIdentifier: nil)
+//            self!.mapView.centerCoordinate = pointAnnotation.coordinate
+//            self!.mapView.addAnnotation(pinAnnotationView.annotation!)
+//        }
+//    }
+    
+    // MARK: - CLLocationManagerDelegate
+    
+    
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
 }
 

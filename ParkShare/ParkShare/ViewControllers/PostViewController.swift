@@ -7,8 +7,9 @@
 //
 import Parse
 import UIKit
+import MapKit
 
-class PostViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class PostViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, LocationSelectionDelegate {
 
     @IBOutlet weak var titleField: UITextField!
     @IBOutlet weak var descriptionTextView: UITextView!
@@ -16,6 +17,7 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var typeCovering: UISegmentedControl!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var phoneNumber: UITextField!
+    var location: MKMapPoint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,9 +70,7 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         let image = info[.editedImage] as! UIImage
-        
         imageView.image = image
-        
         dismiss(animated: true, completion: nil)
     }
     
@@ -78,7 +78,20 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         view.endEditing(true)
     }
     
+    func changeSelectedParkingLocation(newLocation: MKMapPoint!) {
+        location = newLocation
+        print("New location: \(location)")
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        
+//        if (segue.identifier == "PostToMapSearchSegue"){
+//            let destMapSearchViewController = segue.destination as! MapSearchViewController
+//            destMapSearchViewController.delegate = self
+//        }
+    }
     
 
     /*

@@ -12,6 +12,9 @@
 		135CA7CD225B9E62007620C4 /* ListingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135CA7CC225B9E62007620C4 /* ListingCell.swift */; };
 		135CA7CF225B9E86007620C4 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135CA7CE225B9E86007620C4 /* PostViewController.swift */; };
 		135CA7D1225B9EB9007620C4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135CA7D0225B9EB9007620C4 /* MapViewController.swift */; };
+		4C4118F42288A7D500E446A0 /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4118F32288A7D500E446A0 /* LocationSearchTable.swift */; };
+		4C4118F62288A80D00E446A0 /* MapSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4118F52288A80D00E446A0 /* MapSearchViewController.swift */; };
+		4C4118F82288A8B300E446A0 /* MapSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C4118F72288A8B300E446A0 /* MapSearch.storyboard */; };
 		4C60CE5D2281D76700BA506F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C60CE5C2281D76700BA506F /* CoreLocation.framework */; };
 		4CA00A292262AEFA0062AA26 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA00A282262AEFA0062AA26 /* LoginViewController.swift */; };
 		4CA00A2B2262B0410062AA26 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA00A2A2262B0410062AA26 /* CreateAccountViewController.swift */; };
@@ -41,6 +44,9 @@
 		135CA7D0225B9EB9007620C4 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		1E71F65266E97F10099E95B5 /* Pods-ParkShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkShare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParkShare/Pods-ParkShare.debug.xcconfig"; sourceTree = "<group>"; };
 		3355A55F68D82C7449C9C538 /* Pods-ParkShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParkShare.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParkShare/Pods-ParkShare.release.xcconfig"; sourceTree = "<group>"; };
+		4C4118F32288A7D500E446A0 /* LocationSearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
+		4C4118F52288A80D00E446A0 /* MapSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearchViewController.swift; sourceTree = "<group>"; };
+		4C4118F72288A8B300E446A0 /* MapSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MapSearch.storyboard; sourceTree = "<group>"; };
 		4C60CE5C2281D76700BA506F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		4CA00A282262AEFA0062AA26 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4CA00A2A2262B0410062AA26 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +137,8 @@
 				135CA7CA225B9E34007620C4 /* FeedTableViewController.swift */,
 				4CFBAF07226E600B00292AF5 /* FeedFilterViewController.swift */,
 				776758E6226E788E004C49AE /* ProfileTableViewController.swift */,
+				4C4118F32288A7D500E446A0 /* LocationSearchTable.swift */,
+				4C4118F52288A80D00E446A0 /* MapSearchViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -146,6 +154,7 @@
 				77C34AA9226543B4009250B9 /* Post.storyboard */,
 				77C34AA222654186009250B9 /* CreateAccount.storyboard */,
 				776758E4226E777C004C49AE /* Profile.storyboard */,
+				4C4118F72288A8B300E446A0 /* MapSearch.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -230,6 +239,7 @@
 				77C34AAF22654486009250B9 /* Map.storyboard in Resources */,
 				4CE21055225A4B4C00856191 /* Assets.xcassets in Resources */,
 				4CE21053225A4B4B00856191 /* Main.storyboard in Resources */,
+				4C4118F82288A8B300E446A0 /* MapSearch.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +307,9 @@
 				135CA7D1225B9EB9007620C4 /* MapViewController.swift in Sources */,
 				135CA7CD225B9E62007620C4 /* ListingCell.swift in Sources */,
 				135CA7CB225B9E34007620C4 /* FeedTableViewController.swift in Sources */,
+				4C4118F42288A7D500E446A0 /* LocationSearchTable.swift in Sources */,
 				4CA00A292262AEFA0062AA26 /* LoginViewController.swift in Sources */,
+				4C4118F62288A80D00E446A0 /* MapSearchViewController.swift in Sources */,
 				4CE2104E225A4B4B00856191 /* AppDelegate.swift in Sources */,
 				4CFBAF08226E600B00292AF5 /* FeedFilterViewController.swift in Sources */,
 				776758E7226E788E004C49AE /* ProfileTableViewController.swift in Sources */,
