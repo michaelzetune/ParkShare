@@ -26,6 +26,10 @@
 	<string>Main</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Let&apos;s find some parking spots!</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Let use your photo library for your spot photo</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Let&apos;s use your camera to snap a parking spot photo</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
