@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--ParkShare-->
+        <!--Feed-->
         <scene sceneID="WNL-Z3-kjv">
             <objects>
-                <tableViewController storyboardIdentifier="FeedTableViewController" id="mJ9-qV-Bhp" customClass="FeedTableViewController" customModule="ParkShare" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="FeedTableViewController" title="Feed" id="mJ9-qV-Bhp" customClass="FeedTableViewController" customModule="ParkShare" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="260" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="73q-ox-UhM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -114,6 +114,7 @@ Street Level Parking
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="73q-ox-UhM" id="6Vl-lr-qGP"/>
                     </connections>
@@ -122,11 +123,11 @@ Street Level Parking
             </objects>
             <point key="canvasLocation" x="2704.8000000000002" y="-115.59220389805098"/>
         </scene>
-        <!--Search-->
+        <!--Feed-->
         <scene sceneID="Il1-VN-wwJ">
             <objects>
-                <navigationController storyboardIdentifier="FeedNavigationController" id="mG5-CV-wwp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" id="3tY-1x-H6U"/>
+                <navigationController storyboardIdentifier="FeedNavigationController" title="Feed" id="mG5-CV-wwp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Feed" id="3tY-1x-H6U"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="c1j-UB-Hlr">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

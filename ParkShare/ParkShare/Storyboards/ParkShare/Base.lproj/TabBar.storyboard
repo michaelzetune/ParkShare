@@ -31,7 +31,7 @@
         <scene sceneID="7BD-72-CHd">
             <objects>
                 <viewControllerPlaceholder storyboardName="Feed" id="lbJ-XR-v16" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="ZXk-NH-v3e"/>
+                    <tabBarItem key="tabBarItem" title="Feed" id="ZXk-NH-v3e"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I0l-cn-exH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -41,7 +41,7 @@
         <scene sceneID="Nej-F5-Y1S">
             <objects>
                 <viewControllerPlaceholder storyboardName="Profile" id="5tE-qs-KlR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="RGW-pQ-zEC"/>
+                    <tabBarItem key="tabBarItem" title="Profile" badgeValue="New" id="RGW-pQ-zEC"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hTx-uN-Ylz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -51,7 +51,7 @@
         <scene sceneID="B7L-sM-5Xi">
             <objects>
                 <viewControllerPlaceholder storyboardName="Post" id="Aly-44-IES" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="3Sh-Vt-jvY"/>
+                    <tabBarItem key="tabBarItem" title="Post" id="3Sh-Vt-jvY"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l94-NW-GEz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

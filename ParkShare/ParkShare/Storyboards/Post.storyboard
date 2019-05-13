@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--New Listing-->
+        <!--Post-->
         <scene sceneID="dsq-RZ-b8X">
             <objects>
-                <viewController id="Jub-gY-IQF" customClass="PostViewController" customModule="ParkShare" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Post" id="Jub-gY-IQF" customClass="PostViewController" customModule="ParkShare" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HLB-II-7KJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -144,7 +144,7 @@
         <!--Post-->
         <scene sceneID="iU7-dP-weI">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="l7r-h6-vJY" sceneMemberID="viewController">
+                <navigationController title="Post" automaticallyAdjustsScrollViewInsets="NO" id="l7r-h6-vJY" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Post" id="nmA-tM-qEa"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2G0-GK-b9o">

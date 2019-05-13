@@ -11,13 +11,13 @@
         <!--Profile-->
         <scene sceneID="Vyg-Bw-jM3">
             <objects>
-                <tableViewController id="SDB-z9-ROo" customClass="SearchTableViewController" customModule="ParkShare" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="SDB-z9-ROo" customClass="ProfileTableViewController" customModule="ParkShare" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="263" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qve-Hw-wuq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchCell" rowHeight="263" id="waN-5j-CWq" customClass="SearchCell" customModule="ParkShare" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfileCell" rowHeight="263" id="waN-5j-CWq" customClass="ProfileCell" customModule="ParkShare" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="263"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="waN-5j-CWq" id="oXw-1l-hMQ">
@@ -32,7 +32,7 @@
                                             </constraints>
                                         </imageView>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="parkingspace" translatesAutoresizingMaskIntoConstraints="NO" id="wFl-jc-m4u">
-                                            <rect key="frame" x="211" y="45" width="187" height="135.00000000000045"/>
+                                            <rect key="frame" x="211" y="45" width="187" height="135"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="187" id="3Mh-5k-C1W"/>
                                                 <constraint firstAttribute="height" constant="134.99999999999955" id="qzY-la-kPu"/>
@@ -61,7 +61,7 @@ Street Level Parking
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJn-L0-Jef">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJn-L0-Jef">
                                             <rect key="frame" x="322" y="209" width="76" height="30"/>
                                             <state key="normal" title="Edit Listing"/>
                                             <connections>
@@ -78,6 +78,7 @@ Street Level Parking
                                         <constraint firstItem="7cr-eD-9cd" firstAttribute="leading" secondItem="bqI-WS-YZ8" secondAttribute="trailing" constant="18.5" id="GyC-GH-JM6"/>
                                         <constraint firstAttribute="trailing" secondItem="wFl-jc-m4u" secondAttribute="trailing" constant="16" id="NUM-BP-7Cb"/>
                                         <constraint firstAttribute="trailing" secondItem="HJn-L0-Jef" secondAttribute="trailing" constant="16" id="SyW-NY-mtG"/>
+                                        <constraint firstAttribute="bottom" secondItem="HJn-L0-Jef" secondAttribute="bottom" constant="23.5" id="fVY-gH-2yv"/>
                                         <constraint firstItem="6tu-5n-xXK" firstAttribute="bottom" secondItem="wFl-jc-m4u" secondAttribute="bottom" id="h93-D5-TUI"/>
                                         <constraint firstItem="bqI-WS-YZ8" firstAttribute="top" secondItem="6tu-5n-xXK" secondAttribute="bottom" constant="19" id="qf1-bD-7E2"/>
                                         <constraint firstItem="7cr-eD-9cd" firstAttribute="centerY" secondItem="bqI-WS-YZ8" secondAttribute="centerY" id="y26-p4-3cv"/>
@@ -85,11 +86,12 @@ Street Level Parking
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="infospotLabel" destination="6tu-5n-xXK" id="fst-mq-KTg"/>
-                                    <outlet property="parkingImage" destination="wFl-jc-m4u" id="6Nw-hB-4e2"/>
-                                    <outlet property="profilepicImage" destination="bqI-WS-YZ8" id="QAn-Od-kOd"/>
-                                    <outlet property="titleLabel" destination="COZ-ma-6Xg" id="rQf-Dy-NuH"/>
-                                    <outlet property="usernameLabel" destination="7cr-eD-9cd" id="GHx-n6-rU7"/>
+                                    <outlet property="editListingButton" destination="HJn-L0-Jef" id="XHV-sg-NWm"/>
+                                    <outlet property="infospotLabel" destination="6tu-5n-xXK" id="yGW-A2-7sE"/>
+                                    <outlet property="parkingImage" destination="wFl-jc-m4u" id="vze-jn-4vc"/>
+                                    <outlet property="profilepicImage" destination="bqI-WS-YZ8" id="G0t-82-vqk"/>
+                                    <outlet property="titleLabel" destination="COZ-ma-6Xg" id="eBW-B1-0m4"/>
+                                    <outlet property="usernameLabel" destination="7cr-eD-9cd" id="l4n-vy-8M8"/>
                                     <segue destination="jyi-zf-Ffx" kind="show" id="Mij-cO-uAx"/>
                                 </connections>
                             </tableViewCell>
@@ -112,11 +114,11 @@ Street Level Parking
             </objects>
             <point key="canvasLocation" x="2704.347826086957" y="-115.84821428571428"/>
         </scene>
-        <!--Search-->
+        <!--Profile-->
         <scene sceneID="3vZ-Oh-ZEn">
             <objects>
-                <navigationController id="sxj-GB-cUL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" id="Kbm-Jn-jmn"/>
+                <navigationController title="Profile" id="sxj-GB-cUL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" id="Kbm-Jn-jmn"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VxK-pT-p5J">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

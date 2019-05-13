@@ -25,6 +25,7 @@
 		4CE21058225A4B4C00856191 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CE21056225A4B4C00856191 /* LaunchScreen.storyboard */; };
 		4CFBAF08226E600B00292AF5 /* FeedFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFBAF07226E600B00292AF5 /* FeedFilterViewController.swift */; };
 		770FC45A226549610044B858 /* LogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 770FC459226549610044B858 /* LogIn.storyboard */; };
+		77288B3B2289F87900CF3DFE /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77288B3A2289F87900CF3DFE /* ProfileCell.swift */; };
 		776758E5226E777C004C49AE /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 776758E4226E777C004C49AE /* Profile.storyboard */; };
 		776758E7226E788E004C49AE /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776758E6226E788E004C49AE /* ProfileTableViewController.swift */; };
 		77C34AA322654186009250B9 /* CreateAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77C34AA222654186009250B9 /* CreateAccount.storyboard */; };
@@ -59,6 +60,7 @@
 		4CE21059225A4B4C00856191 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CFBAF07226E600B00292AF5 /* FeedFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedFilterViewController.swift; sourceTree = "<group>"; };
 		770FC459226549610044B858 /* LogIn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LogIn.storyboard; sourceTree = "<group>"; };
+		77288B3A2289F87900CF3DFE /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		776758E4226E777C004C49AE /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		776758E6226E788E004C49AE /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileTableViewController.swift; path = ParkShare/ViewControllers/ProfileTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		77C34AA222654186009250B9 /* CreateAccount.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateAccount.storyboard; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				4CE21056225A4B4C00856191 /* LaunchScreen.storyboard */,
 				4CE21059225A4B4C00856191 /* Info.plist */,
 				135CA7CC225B9E62007620C4 /* ListingCell.swift */,
+				77288B3A2289F87900CF3DFE /* ProfileCell.swift */,
 			);
 			path = ParkShare;
 			sourceTree = "<group>";
@@ -134,8 +137,8 @@
 				1335A09D225C05E000730B5B /* ViewPostingViewController.swift */,
 				4CA00A282262AEFA0062AA26 /* LoginViewController.swift */,
 				4CA00A2A2262B0410062AA26 /* CreateAccountViewController.swift */,
-				135CA7CA225B9E34007620C4 /* FeedTableViewController.swift */,
 				4CFBAF07226E600B00292AF5 /* FeedFilterViewController.swift */,
+				135CA7CA225B9E34007620C4 /* FeedTableViewController.swift */,
 				776758E6226E788E004C49AE /* ProfileTableViewController.swift */,
 				4C4118F32288A7D500E446A0 /* LocationSearchTable.swift */,
 				4C4118F52288A80D00E446A0 /* MapSearchViewController.swift */,
@@ -314,6 +317,7 @@
 				4CFBAF08226E600B00292AF5 /* FeedFilterViewController.swift in Sources */,
 				776758E7226E788E004C49AE /* ProfileTableViewController.swift in Sources */,
 				4CA00A2B2262B0410062AA26 /* CreateAccountViewController.swift in Sources */,
+				77288B3B2289F87900CF3DFE /* ProfileCell.swift in Sources */,
 				135CA7CF225B9E86007620C4 /* PostViewController.swift in Sources */,
 				1335A09E225C05E000730B5B /* ViewPostingViewController.swift in Sources */,
 			);
@@ -487,7 +491,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XD68G6NMDP;
+				DEVELOPMENT_TEAM = KFZM8HA76V;
 				INFOPLIST_FILE = ParkShare/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -507,7 +511,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XD68G6NMDP;
+				DEVELOPMENT_TEAM = KFZM8HA76V;
 				INFOPLIST_FILE = ParkShare/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
