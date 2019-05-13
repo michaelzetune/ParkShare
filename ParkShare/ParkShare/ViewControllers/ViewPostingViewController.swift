@@ -8,6 +8,7 @@
 
 import UIKit
 import MessageUI
+import Parse
 
 class ViewPostingViewController: UIViewController, MFMessageComposeViewControllerDelegate {
     
@@ -20,12 +21,41 @@ class ViewPostingViewController: UIViewController, MFMessageComposeViewControlle
     @IBOutlet weak var userLabel: UILabel!
     
 
-    
+    var pickedPost: PFObject?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        let query = PFQuery(className: "Post")
+        query.includeKeys(["author", "title", "parkingImage", "description"])
+        
+        
+            
+        let user = pickedPost!["author"] as! PFUser
+        posttitleLabel!.text = pickedPost!["title"] as? String
+        postinfoLabel!.text = pickedPost!["description"] as? String
+        userLabel!.text = user["name"] as? String
+        
+        if let profilePicFile = user["profilePicture"] as? PFFileObject {
+            let profilePicUrlString = profilePicFile.url!
+            let profilePicUrl = URL(string: profilePicUrlString)!
+            profilepicImage.af_setImage(withURL: profilePicUrl)
+        } else {
+            profilepicImage.image = UIImage(named: "default-avatar")
+        }
+        
+        if let parkingImageFile = pickedPost!["parkingImage"] as? PFFileObject {
+            let parkingImageUrlString = parkingImageFile.url!
+            let parkingImageUrl = URL(string: parkingImageUrlString)!
+            locationpictureImage.af_setImage(withURL: parkingImageUrl)
+        } else {
+            // do nothing, we can leave the pic blank for now.
+        }
+        
+        
+        
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
         messageImage.isUserInteractionEnabled = true
         messageImage.addGestureRecognizer(tapGestureRecognizer)
@@ -71,7 +101,8 @@ class ViewPostingViewController: UIViewController, MFMessageComposeViewControlle
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        
+    
+
     }
     
 

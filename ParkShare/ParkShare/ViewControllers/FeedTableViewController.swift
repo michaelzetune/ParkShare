@@ -14,6 +14,9 @@ class FeedTableViewController: UITableViewController, FilterDelegate {
     
     var currentMaxCostFilter: Int = 100 // gets set again by FeedFilterViewController
     var posts = [PFObject]()
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,7 +92,17 @@ class FeedTableViewController: UITableViewController, FilterDelegate {
             destFeedFilterViewController.delegate = self
             destFeedFilterViewController.currentCostValue = currentMaxCostFilter
         }
+        
+        if (segue.identifier == "seguetoDetails"){
+            let cell = sender as! UITableViewCell
+            let indexPath = tableView.indexPath(for: cell)
+            let post = posts[(indexPath?.section)!]
+            let destFeedFilterViewController = segue.destination as! ViewPostingViewController
+            destFeedFilterViewController.pickedPost = post
+        }
     }
+    
+    
     
     func changeMaxCostValue(newValue: Int!) {
         currentMaxCostFilter = newValue
@@ -106,3 +119,4 @@ class FeedTableViewController: UITableViewController, FilterDelegate {
     */
 
 }
+

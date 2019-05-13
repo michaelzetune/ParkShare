@@ -93,7 +93,7 @@ Street Level Parking
                                     <outlet property="profilepicImage" destination="vey-TT-9cZ" id="jB3-lz-QP0"/>
                                     <outlet property="titleLabel" destination="ciN-NS-HOX" id="CZD-5Y-qv4"/>
                                     <outlet property="usernameLabel" destination="bEi-E7-Rcz" id="BBI-Ji-p1c"/>
-                                    <segue destination="gBK-vg-v0K" kind="show" id="dRf-aY-7yW"/>
+                                    <segue destination="gBK-vg-v0K" kind="show" identifier="seguetoDetails" id="dRf-aY-7yW"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

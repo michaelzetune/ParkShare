@@ -27,7 +27,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="parkingspace" translatesAutoresizingMaskIntoConstraints="NO" id="Tfo-Nl-96j">
-                                <rect key="frame" x="193" y="128" width="212" height="166.50000000000045"/>
+                                <rect key="frame" x="193" y="128" width="212" height="166.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Tfo-Nl-96j" secondAttribute="height" multiplier="173:136" id="prp-bQ-I7T"/>
                                 </constraints>
