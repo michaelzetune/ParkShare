@@ -25,6 +25,20 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
         mapView.delegate = self
         mapView.mapType = .standard
+        
+        // Test annotations
+        let location1 = CLLocationCoordinate2DMake(30.285403, -97.744213)
+        let annotation1 = MKPointAnnotation()
+        annotation1.coordinate = location1
+        annotation1.title = "2200 Neuces St"
+        annotation1.subtitle = "$125"
+        mapView.addAnnotation(annotation1)
+        let location2 = CLLocationCoordinate2DMake(30.283248, -97.743321)
+        let annotation2 = MKPointAnnotation()
+        annotation2.coordinate = location2
+        annotation2.title = "2008 San Antonio St"
+        annotation2.subtitle = "$80"
+        mapView.addAnnotation(annotation2)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -77,7 +91,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         self.mapView.showsUserLocation = true
     }
     
-    //    override func viewDidLoad() {
+//        override func viewDidLoad() {
     //        super.viewDidLoad()
     //
     //        manager.delegate = self
@@ -85,15 +99,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     //        manager.requestWhenInUseAuthorization()
     //        manager.startUpdatingLocation()
     //
-    ////        let location = CLLocationCoordinate2DMake(30.285172, -97.735743)
-    ////
-    ////        let annotation = MKPointAnnotation()
-    ////        annotation.coordinate = location
-    ////        annotation.title = "2200 Neuces St"
-    ////        annotation.subtitle = "$1500"
-    ////        mapView.addAnnotation(annotation)
+
     //        // Do any additional setup after loading the view.
-    //    }
+//        }
     
     //    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
     //        let location = locations[0]
