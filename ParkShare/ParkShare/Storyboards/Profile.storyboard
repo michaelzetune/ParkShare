@@ -81,6 +81,7 @@ Street Level Parking
                                         <constraint firstAttribute="bottom" secondItem="HJn-L0-Jef" secondAttribute="bottom" constant="23.5" id="fVY-gH-2yv"/>
                                         <constraint firstItem="6tu-5n-xXK" firstAttribute="bottom" secondItem="wFl-jc-m4u" secondAttribute="bottom" id="h93-D5-TUI"/>
                                         <constraint firstItem="bqI-WS-YZ8" firstAttribute="top" secondItem="6tu-5n-xXK" secondAttribute="bottom" constant="19" id="qf1-bD-7E2"/>
+                                        <constraint firstItem="wFl-jc-m4u" firstAttribute="leading" secondItem="6tu-5n-xXK" secondAttribute="trailing" constant="58" id="vDJ-4u-CxA"/>
                                         <constraint firstItem="7cr-eD-9cd" firstAttribute="centerY" secondItem="bqI-WS-YZ8" secondAttribute="centerY" id="y26-p4-3cv"/>
                                         <constraint firstItem="6tu-5n-xXK" firstAttribute="leading" secondItem="COZ-ma-6Xg" secondAttribute="leading" id="z2A-mn-s9E"/>
                                     </constraints>
@@ -118,7 +119,7 @@ Street Level Parking
         <scene sceneID="3vZ-Oh-ZEn">
             <objects>
                 <navigationController title="Profile" id="sxj-GB-cUL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" id="Kbm-Jn-jmn"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="User" id="Kbm-Jn-jmn"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VxK-pT-p5J">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -157,6 +158,7 @@ Street Level Parking
         </scene>
     </scenes>
     <resources>
+        <image name="User" width="30" height="30"/>
         <image name="parkingspace" width="2304" height="1712"/>
         <image name="profilepic" width="3024" height="4032"/>
     </resources>

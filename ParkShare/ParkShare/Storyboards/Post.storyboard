@@ -145,7 +145,7 @@
         <scene sceneID="iU7-dP-weI">
             <objects>
                 <navigationController title="Post" automaticallyAdjustsScrollViewInsets="NO" id="l7r-h6-vJY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Post" id="nmA-tM-qEa"/>
+                    <tabBarItem key="tabBarItem" title="Post" image="Post" id="nmA-tM-qEa"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2G0-GK-b9o">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -161,4 +161,7 @@
             <point key="canvasLocation" x="1782" y="607"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Post" width="30" height="30"/>
+    </resources>
 </document>

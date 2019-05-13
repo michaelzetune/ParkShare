@@ -127,7 +127,7 @@ Street Level Parking
         <scene sceneID="Il1-VN-wwJ">
             <objects>
                 <navigationController storyboardIdentifier="FeedNavigationController" title="Feed" id="mG5-CV-wwp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Feed" id="3tY-1x-H6U"/>
+                    <tabBarItem key="tabBarItem" title="Feed" image="Feed" id="3tY-1x-H6U"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="c1j-UB-Hlr">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -206,6 +206,7 @@ Street Level Parking
         </scene>
     </scenes>
     <resources>
+        <image name="Feed" width="30" height="30"/>
         <image name="parkingspace" width="2304" height="1712"/>
         <image name="profilepic" width="3024" height="4032"/>
     </resources>
