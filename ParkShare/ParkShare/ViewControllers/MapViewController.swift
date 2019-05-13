@@ -26,13 +26,23 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         mapView.delegate = self
         mapView.mapType = .standard
         
+        
         // Test annotations
+        
+        
+        
         let location1 = CLLocationCoordinate2DMake(30.285403, -97.744213)
+        
+        var span = MKCoordinateSpan(latitudeDelta: 0.0002, longitudeDelta: 0.0002)
+        var region = MKCoordinateRegion(center: location1, span: span)
+        mapView.setRegion(region, animated:true)
+        
         let annotation1 = MKPointAnnotation()
         annotation1.coordinate = location1
         annotation1.title = "2200 Neuces St"
         annotation1.subtitle = "$125"
         mapView.addAnnotation(annotation1)
+        
         let location2 = CLLocationCoordinate2DMake(30.283248, -97.743321)
         let annotation2 = MKPointAnnotation()
         annotation2.coordinate = location2
@@ -75,7 +85,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
         let location = locations.last
         let center = CLLocationCoordinate2D(latitude: location!.coordinate.latitude, longitude: location!.coordinate.longitude)
-        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.002, longitudeDelta: 0.002))
         
         self.mapView.setRegion(region, animated: true)
         
