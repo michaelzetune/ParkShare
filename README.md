@@ -10,6 +10,9 @@
 ### Description
 ParkShare allows you to find others' spare parking spots to rent out for short-term or long-term periods. Search for a spot on a map and filter based on price, garage vs. street parking, and more. Owners can use the app to post their empty spots and start making money!
 
+## Project Presentation:
+[![Walkthrough Video](https://img.youtube.com/vi/jRwoxPmXOk4/1.jpg)](https://youtu.be/jRwoxPmXOk4)
+
 ### App Evaluation
 - **Category:** Shopping
 - **Mobile:** ParkShare uses the device camera and maps features to enchance the experience beyond what a website can provide.
@@ -120,7 +123,7 @@ As an owner of a spare parking spot I want to:
         // There was a problem, check error.description
         }}
         ```
-    - Home Feed Screen 
+    - Home Feed Screen
         - (READ/GET) get all posts
         ```swift
         let query = PFQuery(className:"post")
@@ -136,7 +139,7 @@ As an owner of a spare parking spot I want to:
         }
         ```
         - (READ/GET) author for the posts
-        
+
     - Map Screen
         - (READ/GET) location of posts
         ```swift
@@ -144,7 +147,7 @@ As an owner of a spare parking spot I want to:
         query.whereKey("location", equalTo: )
         query.order(byDescending: "createdAt")
         query.findObjectsInBackground { (posts: [PFObject]?, error: Error?) in
-            if let error = error { 
+            if let error = error {
                 print(error.localizedDescription)
             } else if let posts = posts {
           print("Successfully retrieved \(posts.count) posts.")
@@ -163,26 +166,26 @@ As an owner of a spare parking spot I want to:
         let parkingImage = UIImagePNGRepresentation(image)
         let parkingImageFile = PFFileObject(name:"image.png",data:imageData)
         post["parkingImage"] = parkingImageFile
-                
+
         let date = Date()
         let calendar = Calendar.current
         let hour = calendar.component(.hour, from: date)
         let minutes = calendar.component(.minute, from: date)
 
-        post["creationDate"] = 
+        post["creationDate"] =
         //figure out how to save date and time in Parse
-        
+
         post["description"] = "This is a description"
-        
+
         post["location"] = [latitute, longitude]
         post["monthlyPrice"] = 1.00
         post["parkingType"] = ["Garage", "Street covered", "street uncovered"]
-        
+
         post["availableDates"] = {JSONObject}
         //figure out how to use Swift DateInterval Class
-        
+
         post[phoneNumber] = 000-000-000
-        
+
         post.saveInBackground {(success: Bool, error: Error?) in
         if (success) {
         // The object has been saved.
